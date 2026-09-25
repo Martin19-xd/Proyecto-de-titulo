@@ -1,0 +1,32 @@
+{
+  "version": "chile-references-2026-09-v2",
+  "reviewed_at": "2026-09-23",
+  "purpose": "Referencias de dominios para contexto y pruebas. Popularidad no equivale a seguridad; no se usan como etiquetas ML.",
+  "sources": {
+    "q4_2025": "https://anda.cl/wp-content/uploads/2026/01/attachment-Reporte-Q4-2025-Similarweb-Admetricks-Chile.pdf",
+    "aug_2026": "https://www.similarweb.com/top-websites/chile/",
+    "commerce_aug_2026": "https://www.similarweb.com/top-websites/chile/e-commerce-and-shopping/",
+    "organic_snapshot": "https://ahrefstop.com/websites/chile"
+  },
+  "sites": [
+    {"name":"Google","domain":"google.com","aliases":["google"],"source":"q4_2025","rank":1},
+    {"name":"YouTube","domain":"youtube.com","aliases":["youtube"],"source":"q4_2025","rank":2},
+    {"name":"Instagram","domain":"instagram.com","aliases":["instagram"],"source":"q4_2025","rank":3},
+    {"name":"Facebook","domain":"facebook.com","aliases":["facebook"],"source":"q4_2025","rank":4},
+    {"name":"WhatsApp","domain":"whatsapp.com","aliases":["whatsapp"],"source":"q4_2025","rank":5},
+    {"name":"ChatGPT","domain":"chatgpt.com","aliases":["chatgpt"],"source":"q4_2025","rank":6},
+    {"name":"Emol","domain":"emol.com","aliases":["emol"],"source":"q4_2025","rank":7},
+    {"name":"Mercado Libre","domain":"mercadolibre.cl","aliases":["mercadolibre"],"source":"q4_2025","rank":8},
+    {"name":"BancoEstado","domain":"bancoestado.cl","aliases":["bancoestado"],"source":"q4_2025","rank":9},
+    {"name":"BioBioChile","domain":"biobiochile.cl","aliases":["biobiochile"],"source":"q4_2025","rank":10},
+    {"name":"Falabella","domain":"falabella.com","aliases":["falabella"],"source":"commerce_aug_2026","rank":2},
+    {"name":"Lider","domain":"lider.cl","aliases":["lider"],"source":"commerce_aug_2026","rank":3},
+    {"name":"AliExpress","domain":"aliexpress.com","aliases":["aliexpress"],"source":"commerce_aug_2026","rank":4},
+    {"name":"Paris","domain":"paris.cl","aliases":["paris"],"source":"commerce_aug_2026","rank":5},
+    {"name":"SII","domain":"sii.cl","aliases":["sii"],"source":"organic_snapshot","rank":19},
+    {"name":"ChileAtiende","domain":"chileatiende.gob.cl","aliases":["chileatiende"],"source":"organic_snapshot","rank":21},
+    {"name":"Banco de Chile","domain":"bancochile.cl","aliases":["bancochile"],"source":"organic_snapshot","rank":24},
+    {"name":"Santander","domain":"santander.cl","aliases":["santander"],"source":"organic_snapshot","rank":27},
+    {"name":"TikTok","domain":"tiktok.com","aliases":["tiktok"],"source":"organic_snapshot","rank":17}
+  ]
+}

@@ -1,0 +1,2535 @@
+{
+  "date": "2026-09-23T19:36:37.897579+00:00",
+  "purpose": "Pruebas funcionales; no prueban seguridad real ni exactitud ML.",
+  "total": 24,
+  "passed": 24,
+  "cases": [
+    {
+      "case_id": "CU02-01",
+      "url_controlled": "https://facebook.com",
+      "expected_reference": "Facebook",
+      "expected_invalid": false,
+      "result": {
+        "analysis_id": "40428535-f489-4e4a-99a7-0c21a5738e6b",
+        "analyzed_at": "2026-09-23T19:36:37.330882+00:00",
+        "state": "CLASIFICADA",
+        "classification": "likely_suspicious",
+        "level": "ALTO",
+        "p_phishing": 0.994511,
+        "coverage": "PARCIAL",
+        "analysis_mode": "static_url",
+        "observed_features": {
+          "url_length": 20,
+          "host_length": 12,
+          "path_length": 0,
+          "query_length": 0,
+          "subdomains": 0,
+          "path_segments": 0,
+          "parameters": 0,
+          "digits": 0,
+          "digit_ratio": 0.0,
+          "hyphens": 0,
+          "host_hyphens": 0,
+          "dots": 1,
+          "at_signs": 0,
+          "percent_signs": 0,
+          "equals": 0,
+          "special_ratio": 0.2,
+          "is_ip": 0,
+          "https_declared": 1,
+          "explicit_port": 0,
+          "has_userinfo": 0,
+          "punycode": 0,
+          "host_entropy": 3.0220552088742005,
+          "path_entropy": 0.0,
+          "keyword_count": 0,
+          "has_fragment": 0
+        },
+        "criteria": [
+          {
+            "id": "url_extensa",
+            "state": "NO_DETECTADO",
+            "evidence": "Longitud: 20; umbral descriptivo: 200."
+          },
+          {
+            "id": "multiples_subdominios",
+            "state": "NO_DETECTADO",
+            "evidence": "Subdominios: 0."
+          },
+          {
+            "id": "ip_en_hostname",
+            "state": "NO_DETECTADO",
+            "evidence": "Hostname expresado como IP literal."
+          },
+          {
+            "id": "userinfo",
+            "state": "NO_DETECTADO",
+            "evidence": "Presencia de información antes de @ en la autoridad."
+          },
+          {
+            "id": "palabras_referencia",
+            "state": "NO_DETECTADO",
+            "evidence": "Coincidencias léxicas: 0."
+          },
+          {
+            "id": "acortador",
+            "state": "NO_DETECTADO",
+            "evidence": "Comparación exacta con catálogo parcial de acortadores."
+          },
+          {
+            "id": "marca_fuera_dominio_referencia",
+            "state": "NO_DETECTADO",
+            "evidence": "Mención textual fuera del hostname de referencia: "
+          },
+          {
+            "id": "solicitud_credenciales",
+            "state": "NO_EVALUABLE",
+            "evidence": "No se obtiene contenido ni se visita el sitio."
+          },
+          {
+            "id": "redirecciones",
+            "state": "NO_EVALUABLE",
+            "evidence": "No se obtiene contenido ni se visita el sitio."
+          },
+          {
+            "id": "inconsistencia_visual",
+            "state": "NO_EVALUABLE",
+            "evidence": "No se obtiene contenido ni se visita el sitio."
+          }
+        ],
+        "reference": {
+          "hostname_matches": [
+            "Facebook"
+          ],
+          "brand_mentions_elsewhere": [],
+          "note": "Catálogo parcial de referencia. Coincidir no garantiza seguridad; no coincidir tampoco demuestra fraude."
+        },
+        "hostname": "facebook.com",
+        "model_version": "forest-a236549c-s42-2026-09-23T19:32:22.140656+00:00",
+        "feature_version": "static-v1",
+        "model_explanation": null,
+        "limitations": "Estimación académica basada solo en el texto de la URL. No se visitó el sitio ni se verificaron contenido, TLS, redirecciones o reputación actual. No garantiza seguridad ni confirma phishing.",
+        "message": "Probablemente sospechosa",
+        "model_name": "forest",
+        "model_classification": "likely_suspicious",
+        "precaution_reasons": [],
+        "precaution_policy_version": "precaution-v1",
+        "precaution_override": false,
+        "decision_policy": {
+          "low": 0.5,
+          "high": 0.5,
+          "version": "policy-v1",
+          "empirical_class_error_budget": 0.05,
+          "min_validation_cases": 30,
+          "note": "Umbrales elegidos en validación independiente. No garantizan tasas futuras."
+        },
+        "calibration": "sigmoid_holdout",
+        "model_explanation_note": "Las observaciones no son atribuciones causales ni SHAP."
+      },
+      "matches_functional_expectation": true
+    },
+    {
+      "case_id": "CU02-02",
+      "url_controlled": "https://www.facebook.com",
+      "expected_reference": "Facebook",
+      "expected_invalid": false,
+      "result": {
+        "analysis_id": "33cf96ac-ec7f-45f7-b74c-50c8e206b675",
+        "analyzed_at": "2026-09-23T19:36:37.368650+00:00",
+        "state": "CLASIFICADA",
+        "classification": "likely_legitimate",
+        "level": "BAJO",
+        "p_phishing": 0.00186,
+        "coverage": "PARCIAL",
+        "analysis_mode": "static_url",
+        "observed_features": {
+          "url_length": 24,
+          "host_length": 16,
+          "path_length": 0,
+          "query_length": 0,
+          "subdomains": 1,
+          "path_segments": 0,
+          "parameters": 0,
+          "digits": 0,
+          "digit_ratio": 0.0,
+          "hyphens": 0,
+          "host_hyphens": 0,
+          "dots": 2,
+          "at_signs": 0,
+          "percent_signs": 0,
+          "equals": 0,
+          "special_ratio": 0.20833333333333334,
+          "is_ip": 0,
+          "https_declared": 1,
+          "explicit_port": 0,
+          "has_userinfo": 0,
+          "punycode": 0,
+          "host_entropy": 3.1556390622295662,
+          "path_entropy": 0.0,
+          "keyword_count": 0,
+          "has_fragment": 0
+        },
+        "criteria": [
+          {
+            "id": "url_extensa",
+            "state": "NO_DETECTADO",
+            "evidence": "Longitud: 24; umbral descriptivo: 200."
+          },
+          {
+            "id": "multiples_subdominios",
+            "state": "NO_DETECTADO",
+            "evidence": "Subdominios: 1."
+          },
+          {
+            "id": "ip_en_hostname",
+            "state": "NO_DETECTADO",
+            "evidence": "Hostname expresado como IP literal."
+          },
+          {
+            "id": "userinfo",
+            "state": "NO_DETECTADO",
+            "evidence": "Presencia de información antes de @ en la autoridad."
+          },
+          {
+            "id": "palabras_referencia",
+            "state": "NO_DETECTADO",
+            "evidence": "Coincidencias léxicas: 0."
+          },
+          {
+            "id": "acortador",
+            "state": "NO_DETECTADO",
+            "evidence": "Comparación exacta con catálogo parcial de acortadores."
+          },
+          {
+            "id": "marca_fuera_dominio_referencia",
+            "state": "NO_DETECTADO",
+            "evidence": "Mención textual fuera del hostname de referencia: "
+          },
+          {
+            "id": "solicitud_credenciales",
+            "state": "NO_EVALUABLE",
+            "evidence": "No se obtiene contenido ni se visita el sitio."
+          },
+          {
+            "id": "redirecciones",
+            "state": "NO_EVALUABLE",
+            "evidence": "No se obtiene contenido ni se visita el sitio."
+          },
+          {
+            "id": "inconsistencia_visual",
+            "state": "NO_EVALUABLE",
+            "evidence": "No se obtiene contenido ni se visita el sitio."
+          }
+        ],
+        "reference": {
+          "hostname_matches": [
+            "Facebook"
+          ],
+          "brand_mentions_elsewhere": [],
+          "note": "Catálogo parcial de referencia. Coincidir no garantiza seguridad; no coincidir tampoco demuestra fraude."
+        },
+        "hostname": "www.facebook.com",
+        "model_version": "forest-a236549c-s42-2026-09-23T19:32:22.140656+00:00",
+        "feature_version": "static-v1",
+        "model_explanation": null,
+        "limitations": "Estimación académica basada solo en el texto de la URL. No se visitó el sitio ni se verificaron contenido, TLS, redirecciones o reputación actual. No garantiza seguridad ni confirma phishing.",
+        "message": "Probablemente legítima",
+        "model_name": "forest",
+        "model_classification": "likely_legitimate",
+        "precaution_reasons": [],
+        "precaution_policy_version": "precaution-v1",
+        "precaution_override": false,
+        "decision_policy": {
+          "low": 0.5,
+          "high": 0.5,
+          "version": "policy-v1",
+          "empirical_class_error_budget": 0.05,
+          "min_validation_cases": 30,
+          "note": "Umbrales elegidos en validación independiente. No garantizan tasas futuras."
+        },
+        "calibration": "sigmoid_holdout",
+        "model_explanation_note": "Las observaciones no son atribuciones causales ni SHAP."
+      },
+      "matches_functional_expectation": true
+    },
+    {
+      "case_id": "CU02-03",
+      "url_controlled": "https://m.facebook.com",
+      "expected_reference": "Facebook",
+      "expected_invalid": false,
+      "result": {
+        "analysis_id": "26714189-def1-438e-9605-8803f03dadd4",
+        "analyzed_at": "2026-09-23T19:36:37.391614+00:00",
+        "state": "CLASIFICADA",
+        "classification": "likely_legitimate",
+        "level": "BAJO",
+        "p_phishing": 0.001442,
+        "coverage": "PARCIAL",
+        "analysis_mode": "static_url",
+        "observed_features": {
+          "url_length": 22,
+          "host_length": 14,
+          "path_length": 0,
+          "query_length": 0,
+          "subdomains": 1,
+          "path_segments": 0,
+          "parameters": 0,
+          "digits": 0,
+          "digit_ratio": 0.0,
+          "hyphens": 0,
+          "host_hyphens": 0,
+          "dots": 2,
+          "at_signs": 0,
+          "percent_signs": 0,
+          "equals": 0,
+          "special_ratio": 0.22727272727272727,
+          "is_ip": 0,
+          "https_declared": 1,
+          "explicit_port": 0,
+          "has_userinfo": 0,
+          "punycode": 0,
+          "host_entropy": 3.0391486719030705,
+          "path_entropy": 0.0,
+          "keyword_count": 0,
+          "has_fragment": 0
+        },
+        "criteria": [
+          {
+            "id": "url_extensa",
+            "state": "NO_DETECTADO",
+            "evidence": "Longitud: 22; umbral descriptivo: 200."
+          },
+          {
+            "id": "multiples_subdominios",
+            "state": "NO_DETECTADO",
+            "evidence": "Subdominios: 1."
+          },
+          {
+            "id": "ip_en_hostname",
+            "state": "NO_DETECTADO",
+            "evidence": "Hostname expresado como IP literal."
+          },
+          {
+            "id": "userinfo",
+            "state": "NO_DETECTADO",
+            "evidence": "Presencia de información antes de @ en la autoridad."
+          },
+          {
+            "id": "palabras_referencia",
+            "state": "NO_DETECTADO",
+            "evidence": "Coincidencias léxicas: 0."
+          },
+          {
+            "id": "acortador",
+            "state": "NO_DETECTADO",
+            "evidence": "Comparación exacta con catálogo parcial de acortadores."
+          },
+          {
+            "id": "marca_fuera_dominio_referencia",
+            "state": "NO_DETECTADO",
+            "evidence": "Mención textual fuera del hostname de referencia: "
+          },
+          {
+            "id": "solicitud_credenciales",
+            "state": "NO_EVALUABLE",
+            "evidence": "No se obtiene contenido ni se visita el sitio."
+          },
+          {
+            "id": "redirecciones",
+            "state": "NO_EVALUABLE",
+            "evidence": "No se obtiene contenido ni se visita el sitio."
+          },
+          {
+            "id": "inconsistencia_visual",
+            "state": "NO_EVALUABLE",
+            "evidence": "No se obtiene contenido ni se visita el sitio."
+          }
+        ],
+        "reference": {
+          "hostname_matches": [
+            "Facebook"
+          ],
+          "brand_mentions_elsewhere": [],
+          "note": "Catálogo parcial de referencia. Coincidir no garantiza seguridad; no coincidir tampoco demuestra fraude."
+        },
+        "hostname": "m.facebook.com",
+        "model_version": "forest-a236549c-s42-2026-09-23T19:32:22.140656+00:00",
+        "feature_version": "static-v1",
+        "model_explanation": null,
+        "limitations": "Estimación académica basada solo en el texto de la URL. No se visitó el sitio ni se verificaron contenido, TLS, redirecciones o reputación actual. No garantiza seguridad ni confirma phishing.",
+        "message": "Probablemente legítima",
+        "model_name": "forest",
+        "model_classification": "likely_legitimate",
+        "precaution_reasons": [],
+        "precaution_policy_version": "precaution-v1",
+        "precaution_override": false,
+        "decision_policy": {
+          "low": 0.5,
+          "high": 0.5,
+          "version": "policy-v1",
+          "empirical_class_error_budget": 0.05,
+          "min_validation_cases": 30,
+          "note": "Umbrales elegidos en validación independiente. No garantizan tasas futuras."
+        },
+        "calibration": "sigmoid_holdout",
+        "model_explanation_note": "Las observaciones no son atribuciones causales ni SHAP."
+      },
+      "matches_functional_expectation": true
+    },
+    {
+      "case_id": "CU02-04",
+      "url_controlled": "https://instagram.com",
+      "expected_reference": "Instagram",
+      "expected_invalid": false,
+      "result": {
+        "analysis_id": "cbb92790-47ea-4b64-951d-1b998e8aac55",
+        "analyzed_at": "2026-09-23T19:36:37.426438+00:00",
+        "state": "CLASIFICADA",
+        "classification": "likely_suspicious",
+        "level": "ALTO",
+        "p_phishing": 0.998944,
+        "coverage": "PARCIAL",
+        "analysis_mode": "static_url",
+        "observed_features": {
+          "url_length": 21,
+          "host_length": 13,
+          "path_length": 0,
+          "query_length": 0,
+          "subdomains": 0,
+          "path_segments": 0,
+          "parameters": 0,
+          "digits": 0,
+          "digit_ratio": 0.0,
+          "hyphens": 0,
+          "host_hyphens": 0,
+          "dots": 1,
+          "at_signs": 0,
+          "percent_signs": 0,
+          "equals": 0,
+          "special_ratio": 0.19047619047619047,
+          "is_ip": 0,
+          "https_declared": 1,
+          "explicit_port": 0,
+          "has_userinfo": 0,
+          "punycode": 0,
+          "host_entropy": 3.3927474104487847,
+          "path_entropy": 0.0,
+          "keyword_count": 0,
+          "has_fragment": 0
+        },
+        "criteria": [
+          {
+            "id": "url_extensa",
+            "state": "NO_DETECTADO",
+            "evidence": "Longitud: 21; umbral descriptivo: 200."
+          },
+          {
+            "id": "multiples_subdominios",
+            "state": "NO_DETECTADO",
+            "evidence": "Subdominios: 0."
+          },
+          {
+            "id": "ip_en_hostname",
+            "state": "NO_DETECTADO",
+            "evidence": "Hostname expresado como IP literal."
+          },
+          {
+            "id": "userinfo",
+            "state": "NO_DETECTADO",
+            "evidence": "Presencia de información antes de @ en la autoridad."
+          },
+          {
+            "id": "palabras_referencia",
+            "state": "NO_DETECTADO",
+            "evidence": "Coincidencias léxicas: 0."
+          },
+          {
+            "id": "acortador",
+            "state": "NO_DETECTADO",
+            "evidence": "Comparación exacta con catálogo parcial de acortadores."
+          },
+          {
+            "id": "marca_fuera_dominio_referencia",
+            "state": "NO_DETECTADO",
+            "evidence": "Mención textual fuera del hostname de referencia: "
+          },
+          {
+            "id": "solicitud_credenciales",
+            "state": "NO_EVALUABLE",
+            "evidence": "No se obtiene contenido ni se visita el sitio."
+          },
+          {
+            "id": "redirecciones",
+            "state": "NO_EVALUABLE",
+            "evidence": "No se obtiene contenido ni se visita el sitio."
+          },
+          {
+            "id": "inconsistencia_visual",
+            "state": "NO_EVALUABLE",
+            "evidence": "No se obtiene contenido ni se visita el sitio."
+          }
+        ],
+        "reference": {
+          "hostname_matches": [
+            "Instagram"
+          ],
+          "brand_mentions_elsewhere": [],
+          "note": "Catálogo parcial de referencia. Coincidir no garantiza seguridad; no coincidir tampoco demuestra fraude."
+        },
+        "hostname": "instagram.com",
+        "model_version": "forest-a236549c-s42-2026-09-23T19:32:22.140656+00:00",
+        "feature_version": "static-v1",
+        "model_explanation": null,
+        "limitations": "Estimación académica basada solo en el texto de la URL. No se visitó el sitio ni se verificaron contenido, TLS, redirecciones o reputación actual. No garantiza seguridad ni confirma phishing.",
+        "message": "Probablemente sospechosa",
+        "model_name": "forest",
+        "model_classification": "likely_suspicious",
+        "precaution_reasons": [],
+        "precaution_policy_version": "precaution-v1",
+        "precaution_override": false,
+        "decision_policy": {
+          "low": 0.5,
+          "high": 0.5,
+          "version": "policy-v1",
+          "empirical_class_error_budget": 0.05,
+          "min_validation_cases": 30,
+          "note": "Umbrales elegidos en validación independiente. No garantizan tasas futuras."
+        },
+        "calibration": "sigmoid_holdout",
+        "model_explanation_note": "Las observaciones no son atribuciones causales ni SHAP."
+      },
+      "matches_functional_expectation": true
+    },
+    {
+      "case_id": "CU02-05",
+      "url_controlled": "https://www.instagram.com",
+      "expected_reference": "Instagram",
+      "expected_invalid": false,
+      "result": {
+        "analysis_id": "f06d6b05-9007-4423-b7c2-cf4ef0acd9e8",
+        "analyzed_at": "2026-09-23T19:36:37.450275+00:00",
+        "state": "CLASIFICADA",
+        "classification": "likely_legitimate",
+        "level": "BAJO",
+        "p_phishing": 0.001047,
+        "coverage": "PARCIAL",
+        "analysis_mode": "static_url",
+        "observed_features": {
+          "url_length": 25,
+          "host_length": 17,
+          "path_length": 0,
+          "query_length": 0,
+          "subdomains": 1,
+          "path_segments": 0,
+          "parameters": 0,
+          "digits": 0,
+          "digit_ratio": 0.0,
+          "hyphens": 0,
+          "host_hyphens": 0,
+          "dots": 2,
+          "at_signs": 0,
+          "percent_signs": 0,
+          "equals": 0,
+          "special_ratio": 0.2,
+          "is_ip": 0,
+          "https_declared": 1,
+          "explicit_port": 0,
+          "has_userinfo": 0,
+          "punycode": 0,
+          "host_entropy": 3.4548223999466057,
+          "path_entropy": 0.0,
+          "keyword_count": 0,
+          "has_fragment": 0
+        },
+        "criteria": [
+          {
+            "id": "url_extensa",
+            "state": "NO_DETECTADO",
+            "evidence": "Longitud: 25; umbral descriptivo: 200."
+          },
+          {
+            "id": "multiples_subdominios",
+            "state": "NO_DETECTADO",
+            "evidence": "Subdominios: 1."
+          },
+          {
+            "id": "ip_en_hostname",
+            "state": "NO_DETECTADO",
+            "evidence": "Hostname expresado como IP literal."
+          },
+          {
+            "id": "userinfo",
+            "state": "NO_DETECTADO",
+            "evidence": "Presencia de información antes de @ en la autoridad."
+          },
+          {
+            "id": "palabras_referencia",
+            "state": "NO_DETECTADO",
+            "evidence": "Coincidencias léxicas: 0."
+          },
+          {
+            "id": "acortador",
+            "state": "NO_DETECTADO",
+            "evidence": "Comparación exacta con catálogo parcial de acortadores."
+          },
+          {
+            "id": "marca_fuera_dominio_referencia",
+            "state": "NO_DETECTADO",
+            "evidence": "Mención textual fuera del hostname de referencia: "
+          },
+          {
+            "id": "solicitud_credenciales",
+            "state": "NO_EVALUABLE",
+            "evidence": "No se obtiene contenido ni se visita el sitio."
+          },
+          {
+            "id": "redirecciones",
+            "state": "NO_EVALUABLE",
+            "evidence": "No se obtiene contenido ni se visita el sitio."
+          },
+          {
+            "id": "inconsistencia_visual",
+            "state": "NO_EVALUABLE",
+            "evidence": "No se obtiene contenido ni se visita el sitio."
+          }
+        ],
+        "reference": {
+          "hostname_matches": [
+            "Instagram"
+          ],
+          "brand_mentions_elsewhere": [],
+          "note": "Catálogo parcial de referencia. Coincidir no garantiza seguridad; no coincidir tampoco demuestra fraude."
+        },
+        "hostname": "www.instagram.com",
+        "model_version": "forest-a236549c-s42-2026-09-23T19:32:22.140656+00:00",
+        "feature_version": "static-v1",
+        "model_explanation": null,
+        "limitations": "Estimación académica basada solo en el texto de la URL. No se visitó el sitio ni se verificaron contenido, TLS, redirecciones o reputación actual. No garantiza seguridad ni confirma phishing.",
+        "message": "Probablemente legítima",
+        "model_name": "forest",
+        "model_classification": "likely_legitimate",
+        "precaution_reasons": [],
+        "precaution_policy_version": "precaution-v1",
+        "precaution_override": false,
+        "decision_policy": {
+          "low": 0.5,
+          "high": 0.5,
+          "version": "policy-v1",
+          "empirical_class_error_budget": 0.05,
+          "min_validation_cases": 30,
+          "note": "Umbrales elegidos en validación independiente. No garantizan tasas futuras."
+        },
+        "calibration": "sigmoid_holdout",
+        "model_explanation_note": "Las observaciones no son atribuciones causales ni SHAP."
+      },
+      "matches_functional_expectation": true
+    },
+    {
+      "case_id": "CU02-06",
+      "url_controlled": "https://bancoestado.cl",
+      "expected_reference": "BancoEstado",
+      "expected_invalid": false,
+      "result": {
+        "analysis_id": "0aece161-4a5b-471d-9093-7061b8344b25",
+        "analyzed_at": "2026-09-23T19:36:37.496202+00:00",
+        "state": "CLASIFICADA",
+        "classification": "likely_suspicious",
+        "level": "ALTO",
+        "p_phishing": 0.999325,
+        "coverage": "PARCIAL",
+        "analysis_mode": "static_url",
+        "observed_features": {
+          "url_length": 22,
+          "host_length": 14,
+          "path_length": 0,
+          "query_length": 0,
+          "subdomains": 0,
+          "path_segments": 0,
+          "parameters": 0,
+          "digits": 0,
+          "digit_ratio": 0.0,
+          "hyphens": 0,
+          "host_hyphens": 0,
+          "dots": 1,
+          "at_signs": 0,
+          "percent_signs": 0,
+          "equals": 0,
+          "special_ratio": 0.18181818181818182,
+          "is_ip": 0,
+          "https_declared": 1,
+          "explicit_port": 0,
+          "has_userinfo": 0,
+          "punycode": 0,
+          "host_entropy": 3.3787834934861753,
+          "path_entropy": 0.0,
+          "keyword_count": 0,
+          "has_fragment": 0
+        },
+        "criteria": [
+          {
+            "id": "url_extensa",
+            "state": "NO_DETECTADO",
+            "evidence": "Longitud: 22; umbral descriptivo: 200."
+          },
+          {
+            "id": "multiples_subdominios",
+            "state": "NO_DETECTADO",
+            "evidence": "Subdominios: 0."
+          },
+          {
+            "id": "ip_en_hostname",
+            "state": "NO_DETECTADO",
+            "evidence": "Hostname expresado como IP literal."
+          },
+          {
+            "id": "userinfo",
+            "state": "NO_DETECTADO",
+            "evidence": "Presencia de información antes de @ en la autoridad."
+          },
+          {
+            "id": "palabras_referencia",
+            "state": "NO_DETECTADO",
+            "evidence": "Coincidencias léxicas: 0."
+          },
+          {
+            "id": "acortador",
+            "state": "NO_DETECTADO",
+            "evidence": "Comparación exacta con catálogo parcial de acortadores."
+          },
+          {
+            "id": "marca_fuera_dominio_referencia",
+            "state": "NO_DETECTADO",
+            "evidence": "Mención textual fuera del hostname de referencia: "
+          },
+          {
+            "id": "solicitud_credenciales",
+            "state": "NO_EVALUABLE",
+            "evidence": "No se obtiene contenido ni se visita el sitio."
+          },
+          {
+            "id": "redirecciones",
+            "state": "NO_EVALUABLE",
+            "evidence": "No se obtiene contenido ni se visita el sitio."
+          },
+          {
+            "id": "inconsistencia_visual",
+            "state": "NO_EVALUABLE",
+            "evidence": "No se obtiene contenido ni se visita el sitio."
+          }
+        ],
+        "reference": {
+          "hostname_matches": [
+            "BancoEstado"
+          ],
+          "brand_mentions_elsewhere": [],
+          "note": "Catálogo parcial de referencia. Coincidir no garantiza seguridad; no coincidir tampoco demuestra fraude."
+        },
+        "hostname": "bancoestado.cl",
+        "model_version": "forest-a236549c-s42-2026-09-23T19:32:22.140656+00:00",
+        "feature_version": "static-v1",
+        "model_explanation": null,
+        "limitations": "Estimación académica basada solo en el texto de la URL. No se visitó el sitio ni se verificaron contenido, TLS, redirecciones o reputación actual. No garantiza seguridad ni confirma phishing.",
+        "message": "Probablemente sospechosa",
+        "model_name": "forest",
+        "model_classification": "likely_suspicious",
+        "precaution_reasons": [],
+        "precaution_policy_version": "precaution-v1",
+        "precaution_override": false,
+        "decision_policy": {
+          "low": 0.5,
+          "high": 0.5,
+          "version": "policy-v1",
+          "empirical_class_error_budget": 0.05,
+          "min_validation_cases": 30,
+          "note": "Umbrales elegidos en validación independiente. No garantizan tasas futuras."
+        },
+        "calibration": "sigmoid_holdout",
+        "model_explanation_note": "Las observaciones no son atribuciones causales ni SHAP."
+      },
+      "matches_functional_expectation": true
+    },
+    {
+      "case_id": "CU02-07",
+      "url_controlled": "https://www.bancoestado.cl",
+      "expected_reference": "BancoEstado",
+      "expected_invalid": false,
+      "result": {
+        "analysis_id": "3f94eab9-bfa7-4123-b850-d9f3e1ddd643",
+        "analyzed_at": "2026-09-23T19:36:37.530156+00:00",
+        "state": "CLASIFICADA",
+        "classification": "likely_legitimate",
+        "level": "BAJO",
+        "p_phishing": 0.00167,
+        "coverage": "PARCIAL",
+        "analysis_mode": "static_url",
+        "observed_features": {
+          "url_length": 26,
+          "host_length": 18,
+          "path_length": 0,
+          "query_length": 0,
+          "subdomains": 1,
+          "path_segments": 0,
+          "parameters": 0,
+          "digits": 0,
+          "digit_ratio": 0.0,
+          "hyphens": 0,
+          "host_hyphens": 0,
+          "dots": 2,
+          "at_signs": 0,
+          "percent_signs": 0,
+          "equals": 0,
+          "special_ratio": 0.19230769230769232,
+          "is_ip": 0,
+          "https_declared": 1,
+          "explicit_port": 0,
+          "has_userinfo": 0,
+          "punycode": 0,
+          "host_entropy": 3.4613201402110083,
+          "path_entropy": 0.0,
+          "keyword_count": 0,
+          "has_fragment": 0
+        },
+        "criteria": [
+          {
+            "id": "url_extensa",
+            "state": "NO_DETECTADO",
+            "evidence": "Longitud: 26; umbral descriptivo: 200."
+          },
+          {
+            "id": "multiples_subdominios",
+            "state": "NO_DETECTADO",
+            "evidence": "Subdominios: 1."
+          },
+          {
+            "id": "ip_en_hostname",
+            "state": "NO_DETECTADO",
+            "evidence": "Hostname expresado como IP literal."
+          },
+          {
+            "id": "userinfo",
+            "state": "NO_DETECTADO",
+            "evidence": "Presencia de información antes de @ en la autoridad."
+          },
+          {
+            "id": "palabras_referencia",
+            "state": "NO_DETECTADO",
+            "evidence": "Coincidencias léxicas: 0."
+          },
+          {
+            "id": "acortador",
+            "state": "NO_DETECTADO",
+            "evidence": "Comparación exacta con catálogo parcial de acortadores."
+          },
+          {
+            "id": "marca_fuera_dominio_referencia",
+            "state": "NO_DETECTADO",
+            "evidence": "Mención textual fuera del hostname de referencia: "
+          },
+          {
+            "id": "solicitud_credenciales",
+            "state": "NO_EVALUABLE",
+            "evidence": "No se obtiene contenido ni se visita el sitio."
+          },
+          {
+            "id": "redirecciones",
+            "state": "NO_EVALUABLE",
+            "evidence": "No se obtiene contenido ni se visita el sitio."
+          },
+          {
+            "id": "inconsistencia_visual",
+            "state": "NO_EVALUABLE",
+            "evidence": "No se obtiene contenido ni se visita el sitio."
+          }
+        ],
+        "reference": {
+          "hostname_matches": [
+            "BancoEstado"
+          ],
+          "brand_mentions_elsewhere": [],
+          "note": "Catálogo parcial de referencia. Coincidir no garantiza seguridad; no coincidir tampoco demuestra fraude."
+        },
+        "hostname": "www.bancoestado.cl",
+        "model_version": "forest-a236549c-s42-2026-09-23T19:32:22.140656+00:00",
+        "feature_version": "static-v1",
+        "model_explanation": null,
+        "limitations": "Estimación académica basada solo en el texto de la URL. No se visitó el sitio ni se verificaron contenido, TLS, redirecciones o reputación actual. No garantiza seguridad ni confirma phishing.",
+        "message": "Probablemente legítima",
+        "model_name": "forest",
+        "model_classification": "likely_legitimate",
+        "precaution_reasons": [],
+        "precaution_policy_version": "precaution-v1",
+        "precaution_override": false,
+        "decision_policy": {
+          "low": 0.5,
+          "high": 0.5,
+          "version": "policy-v1",
+          "empirical_class_error_budget": 0.05,
+          "min_validation_cases": 30,
+          "note": "Umbrales elegidos en validación independiente. No garantizan tasas futuras."
+        },
+        "calibration": "sigmoid_holdout",
+        "model_explanation_note": "Las observaciones no son atribuciones causales ni SHAP."
+      },
+      "matches_functional_expectation": true
+    },
+    {
+      "case_id": "CU02-08",
+      "url_controlled": "https://BANCOESTADO.CL",
+      "expected_reference": "BancoEstado",
+      "expected_invalid": false,
+      "result": {
+        "analysis_id": "e03edf51-e726-444b-9189-b87cb2c8f0f1",
+        "analyzed_at": "2026-09-23T19:36:37.566131+00:00",
+        "state": "CLASIFICADA",
+        "classification": "likely_suspicious",
+        "level": "ALTO",
+        "p_phishing": 0.999325,
+        "coverage": "PARCIAL",
+        "analysis_mode": "static_url",
+        "observed_features": {
+          "url_length": 22,
+          "host_length": 14,
+          "path_length": 0,
+          "query_length": 0,
+          "subdomains": 0,
+          "path_segments": 0,
+          "parameters": 0,
+          "digits": 0,
+          "digit_ratio": 0.0,
+          "hyphens": 0,
+          "host_hyphens": 0,
+          "dots": 1,
+          "at_signs": 0,
+          "percent_signs": 0,
+          "equals": 0,
+          "special_ratio": 0.18181818181818182,
+          "is_ip": 0,
+          "https_declared": 1,
+          "explicit_port": 0,
+          "has_userinfo": 0,
+          "punycode": 0,
+          "host_entropy": 3.3787834934861753,
+          "path_entropy": 0.0,
+          "keyword_count": 0,
+          "has_fragment": 0
+        },
+        "criteria": [
+          {
+            "id": "url_extensa",
+            "state": "NO_DETECTADO",
+            "evidence": "Longitud: 22; umbral descriptivo: 200."
+          },
+          {
+            "id": "multiples_subdominios",
+            "state": "NO_DETECTADO",
+            "evidence": "Subdominios: 0."
+          },
+          {
+            "id": "ip_en_hostname",
+            "state": "NO_DETECTADO",
+            "evidence": "Hostname expresado como IP literal."
+          },
+          {
+            "id": "userinfo",
+            "state": "NO_DETECTADO",
+            "evidence": "Presencia de información antes de @ en la autoridad."
+          },
+          {
+            "id": "palabras_referencia",
+            "state": "NO_DETECTADO",
+            "evidence": "Coincidencias léxicas: 0."
+          },
+          {
+            "id": "acortador",
+            "state": "NO_DETECTADO",
+            "evidence": "Comparación exacta con catálogo parcial de acortadores."
+          },
+          {
+            "id": "marca_fuera_dominio_referencia",
+            "state": "NO_DETECTADO",
+            "evidence": "Mención textual fuera del hostname de referencia: "
+          },
+          {
+            "id": "solicitud_credenciales",
+            "state": "NO_EVALUABLE",
+            "evidence": "No se obtiene contenido ni se visita el sitio."
+          },
+          {
+            "id": "redirecciones",
+            "state": "NO_EVALUABLE",
+            "evidence": "No se obtiene contenido ni se visita el sitio."
+          },
+          {
+            "id": "inconsistencia_visual",
+            "state": "NO_EVALUABLE",
+            "evidence": "No se obtiene contenido ni se visita el sitio."
+          }
+        ],
+        "reference": {
+          "hostname_matches": [
+            "BancoEstado"
+          ],
+          "brand_mentions_elsewhere": [],
+          "note": "Catálogo parcial de referencia. Coincidir no garantiza seguridad; no coincidir tampoco demuestra fraude."
+        },
+        "hostname": "bancoestado.cl",
+        "model_version": "forest-a236549c-s42-2026-09-23T19:32:22.140656+00:00",
+        "feature_version": "static-v1",
+        "model_explanation": null,
+        "limitations": "Estimación académica basada solo en el texto de la URL. No se visitó el sitio ni se verificaron contenido, TLS, redirecciones o reputación actual. No garantiza seguridad ni confirma phishing.",
+        "message": "Probablemente sospechosa",
+        "model_name": "forest",
+        "model_classification": "likely_suspicious",
+        "precaution_reasons": [],
+        "precaution_policy_version": "precaution-v1",
+        "precaution_override": false,
+        "decision_policy": {
+          "low": 0.5,
+          "high": 0.5,
+          "version": "policy-v1",
+          "empirical_class_error_budget": 0.05,
+          "min_validation_cases": 30,
+          "note": "Umbrales elegidos en validación independiente. No garantizan tasas futuras."
+        },
+        "calibration": "sigmoid_holdout",
+        "model_explanation_note": "Las observaciones no son atribuciones causales ni SHAP."
+      },
+      "matches_functional_expectation": true
+    },
+    {
+      "case_id": "CU02-09",
+      "url_controlled": "https://bancoestado.cl.",
+      "expected_reference": "BancoEstado",
+      "expected_invalid": false,
+      "result": {
+        "analysis_id": "ce345c77-0b5b-4158-898b-a5f4348e77cc",
+        "analyzed_at": "2026-09-23T19:36:37.599761+00:00",
+        "state": "CLASIFICADA",
+        "classification": "likely_suspicious",
+        "level": "ALTO",
+        "p_phishing": 0.890308,
+        "coverage": "PARCIAL",
+        "analysis_mode": "static_url",
+        "observed_features": {
+          "url_length": 23,
+          "host_length": 14,
+          "path_length": 0,
+          "query_length": 0,
+          "subdomains": 0,
+          "path_segments": 0,
+          "parameters": 0,
+          "digits": 0,
+          "digit_ratio": 0.0,
+          "hyphens": 0,
+          "host_hyphens": 0,
+          "dots": 2,
+          "at_signs": 0,
+          "percent_signs": 0,
+          "equals": 0,
+          "special_ratio": 0.21739130434782608,
+          "is_ip": 0,
+          "https_declared": 1,
+          "explicit_port": 0,
+          "has_userinfo": 0,
+          "punycode": 0,
+          "host_entropy": 3.3787834934861753,
+          "path_entropy": 0.0,
+          "keyword_count": 0,
+          "has_fragment": 0
+        },
+        "criteria": [
+          {
+            "id": "url_extensa",
+            "state": "NO_DETECTADO",
+            "evidence": "Longitud: 23; umbral descriptivo: 200."
+          },
+          {
+            "id": "multiples_subdominios",
+            "state": "NO_DETECTADO",
+            "evidence": "Subdominios: 0."
+          },
+          {
+            "id": "ip_en_hostname",
+            "state": "NO_DETECTADO",
+            "evidence": "Hostname expresado como IP literal."
+          },
+          {
+            "id": "userinfo",
+            "state": "NO_DETECTADO",
+            "evidence": "Presencia de información antes de @ en la autoridad."
+          },
+          {
+            "id": "palabras_referencia",
+            "state": "NO_DETECTADO",
+            "evidence": "Coincidencias léxicas: 0."
+          },
+          {
+            "id": "acortador",
+            "state": "NO_DETECTADO",
+            "evidence": "Comparación exacta con catálogo parcial de acortadores."
+          },
+          {
+            "id": "marca_fuera_dominio_referencia",
+            "state": "NO_DETECTADO",
+            "evidence": "Mención textual fuera del hostname de referencia: "
+          },
+          {
+            "id": "solicitud_credenciales",
+            "state": "NO_EVALUABLE",
+            "evidence": "No se obtiene contenido ni se visita el sitio."
+          },
+          {
+            "id": "redirecciones",
+            "state": "NO_EVALUABLE",
+            "evidence": "No se obtiene contenido ni se visita el sitio."
+          },
+          {
+            "id": "inconsistencia_visual",
+            "state": "NO_EVALUABLE",
+            "evidence": "No se obtiene contenido ni se visita el sitio."
+          }
+        ],
+        "reference": {
+          "hostname_matches": [
+            "BancoEstado"
+          ],
+          "brand_mentions_elsewhere": [],
+          "note": "Catálogo parcial de referencia. Coincidir no garantiza seguridad; no coincidir tampoco demuestra fraude."
+        },
+        "hostname": "bancoestado.cl",
+        "model_version": "forest-a236549c-s42-2026-09-23T19:32:22.140656+00:00",
+        "feature_version": "static-v1",
+        "model_explanation": null,
+        "limitations": "Estimación académica basada solo en el texto de la URL. No se visitó el sitio ni se verificaron contenido, TLS, redirecciones o reputación actual. No garantiza seguridad ni confirma phishing.",
+        "message": "Probablemente sospechosa",
+        "model_name": "forest",
+        "model_classification": "likely_suspicious",
+        "precaution_reasons": [],
+        "precaution_policy_version": "precaution-v1",
+        "precaution_override": false,
+        "decision_policy": {
+          "low": 0.5,
+          "high": 0.5,
+          "version": "policy-v1",
+          "empirical_class_error_budget": 0.05,
+          "min_validation_cases": 30,
+          "note": "Umbrales elegidos en validación independiente. No garantizan tasas futuras."
+        },
+        "calibration": "sigmoid_holdout",
+        "model_explanation_note": "Las observaciones no son atribuciones causales ni SHAP."
+      },
+      "matches_functional_expectation": true
+    },
+    {
+      "case_id": "CU02-10",
+      "url_controlled": "https://bancoestado.cl:443",
+      "expected_reference": "BancoEstado",
+      "expected_invalid": false,
+      "result": {
+        "analysis_id": "03a2a7c8-631c-41f1-993c-360143cb18e5",
+        "analyzed_at": "2026-09-23T19:36:37.622481+00:00",
+        "state": "CLASIFICADA",
+        "classification": "likely_suspicious",
+        "level": "ALTO",
+        "p_phishing": 0.979395,
+        "coverage": "PARCIAL",
+        "analysis_mode": "static_url",
+        "observed_features": {
+          "url_length": 26,
+          "host_length": 14,
+          "path_length": 0,
+          "query_length": 0,
+          "subdomains": 0,
+          "path_segments": 0,
+          "parameters": 0,
+          "digits": 3,
+          "digit_ratio": 0.11538461538461539,
+          "hyphens": 0,
+          "host_hyphens": 0,
+          "dots": 1,
+          "at_signs": 0,
+          "percent_signs": 0,
+          "equals": 0,
+          "special_ratio": 0.19230769230769232,
+          "is_ip": 0,
+          "https_declared": 1,
+          "explicit_port": 1,
+          "has_userinfo": 0,
+          "punycode": 0,
+          "host_entropy": 3.3787834934861753,
+          "path_entropy": 0.0,
+          "keyword_count": 0,
+          "has_fragment": 0
+        },
+        "criteria": [
+          {
+            "id": "url_extensa",
+            "state": "NO_DETECTADO",
+            "evidence": "Longitud: 26; umbral descriptivo: 200."
+          },
+          {
+            "id": "multiples_subdominios",
+            "state": "NO_DETECTADO",
+            "evidence": "Subdominios: 0."
+          },
+          {
+            "id": "ip_en_hostname",
+            "state": "NO_DETECTADO",
+            "evidence": "Hostname expresado como IP literal."
+          },
+          {
+            "id": "userinfo",
+            "state": "NO_DETECTADO",
+            "evidence": "Presencia de información antes de @ en la autoridad."
+          },
+          {
+            "id": "palabras_referencia",
+            "state": "NO_DETECTADO",
+            "evidence": "Coincidencias léxicas: 0."
+          },
+          {
+            "id": "acortador",
+            "state": "NO_DETECTADO",
+            "evidence": "Comparación exacta con catálogo parcial de acortadores."
+          },
+          {
+            "id": "marca_fuera_dominio_referencia",
+            "state": "NO_DETECTADO",
+            "evidence": "Mención textual fuera del hostname de referencia: "
+          },
+          {
+            "id": "solicitud_credenciales",
+            "state": "NO_EVALUABLE",
+            "evidence": "No se obtiene contenido ni se visita el sitio."
+          },
+          {
+            "id": "redirecciones",
+            "state": "NO_EVALUABLE",
+            "evidence": "No se obtiene contenido ni se visita el sitio."
+          },
+          {
+            "id": "inconsistencia_visual",
+            "state": "NO_EVALUABLE",
+            "evidence": "No se obtiene contenido ni se visita el sitio."
+          }
+        ],
+        "reference": {
+          "hostname_matches": [
+            "BancoEstado"
+          ],
+          "brand_mentions_elsewhere": [],
+          "note": "Catálogo parcial de referencia. Coincidir no garantiza seguridad; no coincidir tampoco demuestra fraude."
+        },
+        "hostname": "bancoestado.cl",
+        "model_version": "forest-a236549c-s42-2026-09-23T19:32:22.140656+00:00",
+        "feature_version": "static-v1",
+        "model_explanation": null,
+        "limitations": "Estimación académica basada solo en el texto de la URL. No se visitó el sitio ni se verificaron contenido, TLS, redirecciones o reputación actual. No garantiza seguridad ni confirma phishing.",
+        "message": "Probablemente sospechosa",
+        "model_name": "forest",
+        "model_classification": "likely_suspicious",
+        "precaution_reasons": [],
+        "precaution_policy_version": "precaution-v1",
+        "precaution_override": false,
+        "decision_policy": {
+          "low": 0.5,
+          "high": 0.5,
+          "version": "policy-v1",
+          "empirical_class_error_budget": 0.05,
+          "min_validation_cases": 30,
+          "note": "Umbrales elegidos en validación independiente. No garantizan tasas futuras."
+        },
+        "calibration": "sigmoid_holdout",
+        "model_explanation_note": "Las observaciones no son atribuciones causales ni SHAP."
+      },
+      "matches_functional_expectation": true
+    },
+    {
+      "case_id": "CU02-11",
+      "url_controlled": "https://bancoestado.cl.ejemplo.test",
+      "expected_reference": null,
+      "expected_invalid": false,
+      "result": {
+        "analysis_id": "9257889e-f9bf-4196-af2c-b154f811aa4c",
+        "analyzed_at": "2026-09-23T19:36:37.656441+00:00",
+        "state": "CLASIFICADA",
+        "classification": "caution",
+        "level": "MEDIO",
+        "p_phishing": 0.121424,
+        "coverage": "PARCIAL",
+        "analysis_mode": "static_url",
+        "observed_features": {
+          "url_length": 35,
+          "host_length": 27,
+          "path_length": 0,
+          "query_length": 0,
+          "subdomains": 3,
+          "path_segments": 0,
+          "parameters": 0,
+          "digits": 0,
+          "digit_ratio": 0.0,
+          "hyphens": 0,
+          "host_hyphens": 0,
+          "dots": 3,
+          "at_signs": 0,
+          "percent_signs": 0,
+          "equals": 0,
+          "special_ratio": 0.17142857142857143,
+          "is_ip": 0,
+          "https_declared": 1,
+          "explicit_port": 0,
+          "has_userinfo": 0,
+          "punycode": 0,
+          "host_entropy": 3.6339740759971573,
+          "path_entropy": 0.0,
+          "keyword_count": 0,
+          "has_fragment": 0
+        },
+        "criteria": [
+          {
+            "id": "url_extensa",
+            "state": "NO_DETECTADO",
+            "evidence": "Longitud: 35; umbral descriptivo: 200."
+          },
+          {
+            "id": "multiples_subdominios",
+            "state": "DETECTADO",
+            "evidence": "Subdominios: 3."
+          },
+          {
+            "id": "ip_en_hostname",
+            "state": "NO_DETECTADO",
+            "evidence": "Hostname expresado como IP literal."
+          },
+          {
+            "id": "userinfo",
+            "state": "NO_DETECTADO",
+            "evidence": "Presencia de información antes de @ en la autoridad."
+          },
+          {
+            "id": "palabras_referencia",
+            "state": "NO_DETECTADO",
+            "evidence": "Coincidencias léxicas: 0."
+          },
+          {
+            "id": "acortador",
+            "state": "NO_DETECTADO",
+            "evidence": "Comparación exacta con catálogo parcial de acortadores."
+          },
+          {
+            "id": "marca_fuera_dominio_referencia",
+            "state": "DETECTADO",
+            "evidence": "Mención textual fuera del hostname de referencia: BancoEstado"
+          },
+          {
+            "id": "solicitud_credenciales",
+            "state": "NO_EVALUABLE",
+            "evidence": "No se obtiene contenido ni se visita el sitio."
+          },
+          {
+            "id": "redirecciones",
+            "state": "NO_EVALUABLE",
+            "evidence": "No se obtiene contenido ni se visita el sitio."
+          },
+          {
+            "id": "inconsistencia_visual",
+            "state": "NO_EVALUABLE",
+            "evidence": "No se obtiene contenido ni se visita el sitio."
+          }
+        ],
+        "reference": {
+          "hostname_matches": [],
+          "brand_mentions_elsewhere": [
+            "BancoEstado"
+          ],
+          "note": "Catálogo parcial de referencia. Coincidir no garantiza seguridad; no coincidir tampoco demuestra fraude."
+        },
+        "hostname": "bancoestado.cl.ejemplo.test",
+        "model_version": "forest-a236549c-s42-2026-09-23T19:32:22.140656+00:00",
+        "feature_version": "static-v1",
+        "model_explanation": null,
+        "limitations": "Estimación académica basada solo en el texto de la URL. No se visitó el sitio ni se verificaron contenido, TLS, redirecciones o reputación actual. No garantiza seguridad ni confirma phishing.",
+        "message": "Requiere precaución",
+        "model_name": "forest",
+        "model_classification": "likely_legitimate",
+        "precaution_reasons": [
+          "La URL menciona una marca, pero el hostname no coincide con su referencia.",
+          "IP literal o sufijo fuera de la lista pública: cobertura limitada para este caso."
+        ],
+        "precaution_policy_version": "precaution-v1",
+        "precaution_override": true,
+        "decision_policy": {
+          "low": 0.5,
+          "high": 0.5,
+          "version": "policy-v1",
+          "empirical_class_error_budget": 0.05,
+          "min_validation_cases": 30,
+          "note": "Umbrales elegidos en validación independiente. No garantizan tasas futuras."
+        },
+        "calibration": "sigmoid_holdout",
+        "model_explanation_note": "Las observaciones no son atribuciones causales ni SHAP."
+      },
+      "matches_functional_expectation": true
+    },
+    {
+      "case_id": "CU02-12",
+      "url_controlled": "https://facebook.com.ejemplo.test",
+      "expected_reference": null,
+      "expected_invalid": false,
+      "result": {
+        "analysis_id": "03445082-43bd-4372-b9f5-2edbadd7f613",
+        "analyzed_at": "2026-09-23T19:36:37.679213+00:00",
+        "state": "CLASIFICADA",
+        "classification": "caution",
+        "level": "MEDIO",
+        "p_phishing": 0.065101,
+        "coverage": "PARCIAL",
+        "analysis_mode": "static_url",
+        "observed_features": {
+          "url_length": 33,
+          "host_length": 25,
+          "path_length": 0,
+          "query_length": 0,
+          "subdomains": 3,
+          "path_segments": 0,
+          "parameters": 0,
+          "digits": 0,
+          "digit_ratio": 0.0,
+          "hyphens": 0,
+          "host_hyphens": 0,
+          "dots": 3,
+          "at_signs": 0,
+          "percent_signs": 0,
+          "equals": 0,
+          "special_ratio": 0.18181818181818182,
+          "is_ip": 0,
+          "https_declared": 1,
+          "explicit_port": 0,
+          "has_userinfo": 0,
+          "punycode": 0,
+          "host_entropy": 3.573660689688186,
+          "path_entropy": 0.0,
+          "keyword_count": 0,
+          "has_fragment": 0
+        },
+        "criteria": [
+          {
+            "id": "url_extensa",
+            "state": "NO_DETECTADO",
+            "evidence": "Longitud: 33; umbral descriptivo: 200."
+          },
+          {
+            "id": "multiples_subdominios",
+            "state": "DETECTADO",
+            "evidence": "Subdominios: 3."
+          },
+          {
+            "id": "ip_en_hostname",
+            "state": "NO_DETECTADO",
+            "evidence": "Hostname expresado como IP literal."
+          },
+          {
+            "id": "userinfo",
+            "state": "NO_DETECTADO",
+            "evidence": "Presencia de información antes de @ en la autoridad."
+          },
+          {
+            "id": "palabras_referencia",
+            "state": "NO_DETECTADO",
+            "evidence": "Coincidencias léxicas: 0."
+          },
+          {
+            "id": "acortador",
+            "state": "NO_DETECTADO",
+            "evidence": "Comparación exacta con catálogo parcial de acortadores."
+          },
+          {
+            "id": "marca_fuera_dominio_referencia",
+            "state": "DETECTADO",
+            "evidence": "Mención textual fuera del hostname de referencia: Facebook"
+          },
+          {
+            "id": "solicitud_credenciales",
+            "state": "NO_EVALUABLE",
+            "evidence": "No se obtiene contenido ni se visita el sitio."
+          },
+          {
+            "id": "redirecciones",
+            "state": "NO_EVALUABLE",
+            "evidence": "No se obtiene contenido ni se visita el sitio."
+          },
+          {
+            "id": "inconsistencia_visual",
+            "state": "NO_EVALUABLE",
+            "evidence": "No se obtiene contenido ni se visita el sitio."
+          }
+        ],
+        "reference": {
+          "hostname_matches": [],
+          "brand_mentions_elsewhere": [
+            "Facebook"
+          ],
+          "note": "Catálogo parcial de referencia. Coincidir no garantiza seguridad; no coincidir tampoco demuestra fraude."
+        },
+        "hostname": "facebook.com.ejemplo.test",
+        "model_version": "forest-a236549c-s42-2026-09-23T19:32:22.140656+00:00",
+        "feature_version": "static-v1",
+        "model_explanation": null,
+        "limitations": "Estimación académica basada solo en el texto de la URL. No se visitó el sitio ni se verificaron contenido, TLS, redirecciones o reputación actual. No garantiza seguridad ni confirma phishing.",
+        "message": "Requiere precaución",
+        "model_name": "forest",
+        "model_classification": "likely_legitimate",
+        "precaution_reasons": [
+          "La URL menciona una marca, pero el hostname no coincide con su referencia.",
+          "IP literal o sufijo fuera de la lista pública: cobertura limitada para este caso."
+        ],
+        "precaution_policy_version": "precaution-v1",
+        "precaution_override": true,
+        "decision_policy": {
+          "low": 0.5,
+          "high": 0.5,
+          "version": "policy-v1",
+          "empirical_class_error_budget": 0.05,
+          "min_validation_cases": 30,
+          "note": "Umbrales elegidos en validación independiente. No garantizan tasas futuras."
+        },
+        "calibration": "sigmoid_holdout",
+        "model_explanation_note": "Las observaciones no son atribuciones causales ni SHAP."
+      },
+      "matches_functional_expectation": true
+    },
+    {
+      "case_id": "CU02-13",
+      "url_controlled": "https://instagram.com.ejemplo.test",
+      "expected_reference": null,
+      "expected_invalid": false,
+      "result": {
+        "analysis_id": "22f2e5d8-27ea-473e-af27-99abc37235d7",
+        "analyzed_at": "2026-09-23T19:36:37.702193+00:00",
+        "state": "CLASIFICADA",
+        "classification": "caution",
+        "level": "MEDIO",
+        "p_phishing": 0.136182,
+        "coverage": "PARCIAL",
+        "analysis_mode": "static_url",
+        "observed_features": {
+          "url_length": 34,
+          "host_length": 26,
+          "path_length": 0,
+          "query_length": 0,
+          "subdomains": 3,
+          "path_segments": 0,
+          "parameters": 0,
+          "digits": 0,
+          "digit_ratio": 0.0,
+          "hyphens": 0,
+          "host_hyphens": 0,
+          "dots": 3,
+          "at_signs": 0,
+          "percent_signs": 0,
+          "equals": 0,
+          "special_ratio": 0.17647058823529413,
+          "is_ip": 0,
+          "https_declared": 1,
+          "explicit_port": 0,
+          "has_userinfo": 0,
+          "punycode": 0,
+          "host_entropy": 3.738149333192866,
+          "path_entropy": 0.0,
+          "keyword_count": 0,
+          "has_fragment": 0
+        },
+        "criteria": [
+          {
+            "id": "url_extensa",
+            "state": "NO_DETECTADO",
+            "evidence": "Longitud: 34; umbral descriptivo: 200."
+          },
+          {
+            "id": "multiples_subdominios",
+            "state": "DETECTADO",
+            "evidence": "Subdominios: 3."
+          },
+          {
+            "id": "ip_en_hostname",
+            "state": "NO_DETECTADO",
+            "evidence": "Hostname expresado como IP literal."
+          },
+          {
+            "id": "userinfo",
+            "state": "NO_DETECTADO",
+            "evidence": "Presencia de información antes de @ en la autoridad."
+          },
+          {
+            "id": "palabras_referencia",
+            "state": "NO_DETECTADO",
+            "evidence": "Coincidencias léxicas: 0."
+          },
+          {
+            "id": "acortador",
+            "state": "NO_DETECTADO",
+            "evidence": "Comparación exacta con catálogo parcial de acortadores."
+          },
+          {
+            "id": "marca_fuera_dominio_referencia",
+            "state": "DETECTADO",
+            "evidence": "Mención textual fuera del hostname de referencia: Instagram"
+          },
+          {
+            "id": "solicitud_credenciales",
+            "state": "NO_EVALUABLE",
+            "evidence": "No se obtiene contenido ni se visita el sitio."
+          },
+          {
+            "id": "redirecciones",
+            "state": "NO_EVALUABLE",
+            "evidence": "No se obtiene contenido ni se visita el sitio."
+          },
+          {
+            "id": "inconsistencia_visual",
+            "state": "NO_EVALUABLE",
+            "evidence": "No se obtiene contenido ni se visita el sitio."
+          }
+        ],
+        "reference": {
+          "hostname_matches": [],
+          "brand_mentions_elsewhere": [
+            "Instagram"
+          ],
+          "note": "Catálogo parcial de referencia. Coincidir no garantiza seguridad; no coincidir tampoco demuestra fraude."
+        },
+        "hostname": "instagram.com.ejemplo.test",
+        "model_version": "forest-a236549c-s42-2026-09-23T19:32:22.140656+00:00",
+        "feature_version": "static-v1",
+        "model_explanation": null,
+        "limitations": "Estimación académica basada solo en el texto de la URL. No se visitó el sitio ni se verificaron contenido, TLS, redirecciones o reputación actual. No garantiza seguridad ni confirma phishing.",
+        "message": "Requiere precaución",
+        "model_name": "forest",
+        "model_classification": "likely_legitimate",
+        "precaution_reasons": [
+          "La URL menciona una marca, pero el hostname no coincide con su referencia.",
+          "IP literal o sufijo fuera de la lista pública: cobertura limitada para este caso."
+        ],
+        "precaution_policy_version": "precaution-v1",
+        "precaution_override": true,
+        "decision_policy": {
+          "low": 0.5,
+          "high": 0.5,
+          "version": "policy-v1",
+          "empirical_class_error_budget": 0.05,
+          "min_validation_cases": 30,
+          "note": "Umbrales elegidos en validación independiente. No garantizan tasas futuras."
+        },
+        "calibration": "sigmoid_holdout",
+        "model_explanation_note": "Las observaciones no son atribuciones causales ni SHAP."
+      },
+      "matches_functional_expectation": true
+    },
+    {
+      "case_id": "CU02-14",
+      "url_controlled": "https://bancoestado.cl@ejemplo.test",
+      "expected_reference": null,
+      "expected_invalid": false,
+      "result": {
+        "analysis_id": "650683dc-3ce0-4eea-8412-6a5e4b7bba9f",
+        "analyzed_at": "2026-09-23T19:36:37.736827+00:00",
+        "state": "CLASIFICADA",
+        "classification": "caution",
+        "level": "MEDIO",
+        "p_phishing": 0.017151,
+        "coverage": "PARCIAL",
+        "analysis_mode": "static_url",
+        "observed_features": {
+          "url_length": 35,
+          "host_length": 12,
+          "path_length": 0,
+          "query_length": 0,
+          "subdomains": 1,
+          "path_segments": 0,
+          "parameters": 0,
+          "digits": 0,
+          "digit_ratio": 0.0,
+          "hyphens": 0,
+          "host_hyphens": 0,
+          "dots": 2,
+          "at_signs": 1,
+          "percent_signs": 0,
+          "equals": 0,
+          "special_ratio": 0.17142857142857143,
+          "is_ip": 0,
+          "https_declared": 1,
+          "explicit_port": 0,
+          "has_userinfo": 1,
+          "punycode": 0,
+          "host_entropy": 3.0220552088742005,
+          "path_entropy": 0.0,
+          "keyword_count": 0,
+          "has_fragment": 0
+        },
+        "criteria": [
+          {
+            "id": "url_extensa",
+            "state": "NO_DETECTADO",
+            "evidence": "Longitud: 35; umbral descriptivo: 200."
+          },
+          {
+            "id": "multiples_subdominios",
+            "state": "NO_DETECTADO",
+            "evidence": "Subdominios: 1."
+          },
+          {
+            "id": "ip_en_hostname",
+            "state": "NO_DETECTADO",
+            "evidence": "Hostname expresado como IP literal."
+          },
+          {
+            "id": "userinfo",
+            "state": "DETECTADO",
+            "evidence": "Presencia de información antes de @ en la autoridad."
+          },
+          {
+            "id": "palabras_referencia",
+            "state": "NO_DETECTADO",
+            "evidence": "Coincidencias léxicas: 0."
+          },
+          {
+            "id": "acortador",
+            "state": "NO_DETECTADO",
+            "evidence": "Comparación exacta con catálogo parcial de acortadores."
+          },
+          {
+            "id": "marca_fuera_dominio_referencia",
+            "state": "DETECTADO",
+            "evidence": "Mención textual fuera del hostname de referencia: BancoEstado"
+          },
+          {
+            "id": "solicitud_credenciales",
+            "state": "NO_EVALUABLE",
+            "evidence": "No se obtiene contenido ni se visita el sitio."
+          },
+          {
+            "id": "redirecciones",
+            "state": "NO_EVALUABLE",
+            "evidence": "No se obtiene contenido ni se visita el sitio."
+          },
+          {
+            "id": "inconsistencia_visual",
+            "state": "NO_EVALUABLE",
+            "evidence": "No se obtiene contenido ni se visita el sitio."
+          }
+        ],
+        "reference": {
+          "hostname_matches": [],
+          "brand_mentions_elsewhere": [
+            "BancoEstado"
+          ],
+          "note": "Catálogo parcial de referencia. Coincidir no garantiza seguridad; no coincidir tampoco demuestra fraude."
+        },
+        "hostname": "ejemplo.test",
+        "model_version": "forest-a236549c-s42-2026-09-23T19:32:22.140656+00:00",
+        "feature_version": "static-v1",
+        "model_explanation": null,
+        "limitations": "Estimación académica basada solo en el texto de la URL. No se visitó el sitio ni se verificaron contenido, TLS, redirecciones o reputación actual. No garantiza seguridad ni confirma phishing.",
+        "message": "Requiere precaución",
+        "model_name": "forest",
+        "model_classification": "likely_legitimate",
+        "precaution_reasons": [
+          "La URL menciona una marca, pero el hostname no coincide con su referencia.",
+          "La autoridad contiene información antes de @; el destino está después de @.",
+          "IP literal o sufijo fuera de la lista pública: cobertura limitada para este caso."
+        ],
+        "precaution_policy_version": "precaution-v1",
+        "precaution_override": true,
+        "decision_policy": {
+          "low": 0.5,
+          "high": 0.5,
+          "version": "policy-v1",
+          "empirical_class_error_budget": 0.05,
+          "min_validation_cases": 30,
+          "note": "Umbrales elegidos en validación independiente. No garantizan tasas futuras."
+        },
+        "calibration": "sigmoid_holdout",
+        "model_explanation_note": "Las observaciones no son atribuciones causales ni SHAP."
+      },
+      "matches_functional_expectation": true
+    },
+    {
+      "case_id": "CU02-15",
+      "url_controlled": "https://ejemplo.test/facebook.com",
+      "expected_reference": null,
+      "expected_invalid": false,
+      "result": {
+        "analysis_id": "09eb42a9-dd83-4588-9d80-5e91aa7836db",
+        "analyzed_at": "2026-09-23T19:36:37.760253+00:00",
+        "state": "CLASIFICADA",
+        "classification": "likely_suspicious",
+        "level": "ALTO",
+        "p_phishing": 0.999963,
+        "coverage": "PARCIAL",
+        "analysis_mode": "static_url",
+        "observed_features": {
+          "url_length": 33,
+          "host_length": 12,
+          "path_length": 13,
+          "query_length": 0,
+          "subdomains": 1,
+          "path_segments": 1,
+          "parameters": 0,
+          "digits": 0,
+          "digit_ratio": 0.0,
+          "hyphens": 0,
+          "host_hyphens": 0,
+          "dots": 2,
+          "at_signs": 0,
+          "percent_signs": 0,
+          "equals": 0,
+          "special_ratio": 0.18181818181818182,
+          "is_ip": 0,
+          "https_declared": 1,
+          "explicit_port": 0,
+          "has_userinfo": 0,
+          "punycode": 0,
+          "host_entropy": 3.0220552088742005,
+          "path_entropy": 3.180832987205441,
+          "keyword_count": 0,
+          "has_fragment": 0
+        },
+        "criteria": [
+          {
+            "id": "url_extensa",
+            "state": "NO_DETECTADO",
+            "evidence": "Longitud: 33; umbral descriptivo: 200."
+          },
+          {
+            "id": "multiples_subdominios",
+            "state": "NO_DETECTADO",
+            "evidence": "Subdominios: 1."
+          },
+          {
+            "id": "ip_en_hostname",
+            "state": "NO_DETECTADO",
+            "evidence": "Hostname expresado como IP literal."
+          },
+          {
+            "id": "userinfo",
+            "state": "NO_DETECTADO",
+            "evidence": "Presencia de información antes de @ en la autoridad."
+          },
+          {
+            "id": "palabras_referencia",
+            "state": "NO_DETECTADO",
+            "evidence": "Coincidencias léxicas: 0."
+          },
+          {
+            "id": "acortador",
+            "state": "NO_DETECTADO",
+            "evidence": "Comparación exacta con catálogo parcial de acortadores."
+          },
+          {
+            "id": "marca_fuera_dominio_referencia",
+            "state": "DETECTADO",
+            "evidence": "Mención textual fuera del hostname de referencia: Facebook"
+          },
+          {
+            "id": "solicitud_credenciales",
+            "state": "NO_EVALUABLE",
+            "evidence": "No se obtiene contenido ni se visita el sitio."
+          },
+          {
+            "id": "redirecciones",
+            "state": "NO_EVALUABLE",
+            "evidence": "No se obtiene contenido ni se visita el sitio."
+          },
+          {
+            "id": "inconsistencia_visual",
+            "state": "NO_EVALUABLE",
+            "evidence": "No se obtiene contenido ni se visita el sitio."
+          }
+        ],
+        "reference": {
+          "hostname_matches": [],
+          "brand_mentions_elsewhere": [
+            "Facebook"
+          ],
+          "note": "Catálogo parcial de referencia. Coincidir no garantiza seguridad; no coincidir tampoco demuestra fraude."
+        },
+        "hostname": "ejemplo.test",
+        "model_version": "forest-a236549c-s42-2026-09-23T19:32:22.140656+00:00",
+        "feature_version": "static-v1",
+        "model_explanation": null,
+        "limitations": "Estimación académica basada solo en el texto de la URL. No se visitó el sitio ni se verificaron contenido, TLS, redirecciones o reputación actual. No garantiza seguridad ni confirma phishing.",
+        "message": "Probablemente sospechosa",
+        "model_name": "forest",
+        "model_classification": "likely_suspicious",
+        "precaution_reasons": [
+          "La URL menciona una marca, pero el hostname no coincide con su referencia.",
+          "IP literal o sufijo fuera de la lista pública: cobertura limitada para este caso."
+        ],
+        "precaution_policy_version": "precaution-v1",
+        "precaution_override": false,
+        "decision_policy": {
+          "low": 0.5,
+          "high": 0.5,
+          "version": "policy-v1",
+          "empirical_class_error_budget": 0.05,
+          "min_validation_cases": 30,
+          "note": "Umbrales elegidos en validación independiente. No garantizan tasas futuras."
+        },
+        "calibration": "sigmoid_holdout",
+        "model_explanation_note": "Las observaciones no son atribuciones causales ni SHAP."
+      },
+      "matches_functional_expectation": true
+    },
+    {
+      "case_id": "CU02-16",
+      "url_controlled": "https://ejemplo.test/?next=https://instagram.com",
+      "expected_reference": null,
+      "expected_invalid": false,
+      "result": {
+        "analysis_id": "be17548e-9dbc-4146-82fd-1eeb38589136",
+        "analyzed_at": "2026-09-23T19:36:37.782732+00:00",
+        "state": "CLASIFICADA",
+        "classification": "likely_suspicious",
+        "level": "ALTO",
+        "p_phishing": 0.999687,
+        "coverage": "PARCIAL",
+        "analysis_mode": "static_url",
+        "observed_features": {
+          "url_length": 48,
+          "host_length": 12,
+          "path_length": 1,
+          "query_length": 26,
+          "subdomains": 1,
+          "path_segments": 0,
+          "parameters": 1,
+          "digits": 0,
+          "digit_ratio": 0.0,
+          "hyphens": 0,
+          "host_hyphens": 0,
+          "dots": 2,
+          "at_signs": 0,
+          "percent_signs": 0,
+          "equals": 1,
+          "special_ratio": 0.22916666666666666,
+          "is_ip": 0,
+          "https_declared": 1,
+          "explicit_port": 0,
+          "has_userinfo": 0,
+          "punycode": 0,
+          "host_entropy": 3.0220552088742005,
+          "path_entropy": -0.0,
+          "keyword_count": 0,
+          "has_fragment": 0
+        },
+        "criteria": [
+          {
+            "id": "url_extensa",
+            "state": "NO_DETECTADO",
+            "evidence": "Longitud: 48; umbral descriptivo: 200."
+          },
+          {
+            "id": "multiples_subdominios",
+            "state": "NO_DETECTADO",
+            "evidence": "Subdominios: 1."
+          },
+          {
+            "id": "ip_en_hostname",
+            "state": "NO_DETECTADO",
+            "evidence": "Hostname expresado como IP literal."
+          },
+          {
+            "id": "userinfo",
+            "state": "NO_DETECTADO",
+            "evidence": "Presencia de información antes de @ en la autoridad."
+          },
+          {
+            "id": "palabras_referencia",
+            "state": "NO_DETECTADO",
+            "evidence": "Coincidencias léxicas: 0."
+          },
+          {
+            "id": "acortador",
+            "state": "NO_DETECTADO",
+            "evidence": "Comparación exacta con catálogo parcial de acortadores."
+          },
+          {
+            "id": "marca_fuera_dominio_referencia",
+            "state": "DETECTADO",
+            "evidence": "Mención textual fuera del hostname de referencia: Instagram"
+          },
+          {
+            "id": "solicitud_credenciales",
+            "state": "NO_EVALUABLE",
+            "evidence": "No se obtiene contenido ni se visita el sitio."
+          },
+          {
+            "id": "redirecciones",
+            "state": "NO_EVALUABLE",
+            "evidence": "No se obtiene contenido ni se visita el sitio."
+          },
+          {
+            "id": "inconsistencia_visual",
+            "state": "NO_EVALUABLE",
+            "evidence": "No se obtiene contenido ni se visita el sitio."
+          }
+        ],
+        "reference": {
+          "hostname_matches": [],
+          "brand_mentions_elsewhere": [
+            "Instagram"
+          ],
+          "note": "Catálogo parcial de referencia. Coincidir no garantiza seguridad; no coincidir tampoco demuestra fraude."
+        },
+        "hostname": "ejemplo.test",
+        "model_version": "forest-a236549c-s42-2026-09-23T19:32:22.140656+00:00",
+        "feature_version": "static-v1",
+        "model_explanation": null,
+        "limitations": "Estimación académica basada solo en el texto de la URL. No se visitó el sitio ni se verificaron contenido, TLS, redirecciones o reputación actual. No garantiza seguridad ni confirma phishing.",
+        "message": "Probablemente sospechosa",
+        "model_name": "forest",
+        "model_classification": "likely_suspicious",
+        "precaution_reasons": [
+          "La URL menciona una marca, pero el hostname no coincide con su referencia.",
+          "IP literal o sufijo fuera de la lista pública: cobertura limitada para este caso."
+        ],
+        "precaution_policy_version": "precaution-v1",
+        "precaution_override": false,
+        "decision_policy": {
+          "low": 0.5,
+          "high": 0.5,
+          "version": "policy-v1",
+          "empirical_class_error_budget": 0.05,
+          "min_validation_cases": 30,
+          "note": "Umbrales elegidos en validación independiente. No garantizan tasas futuras."
+        },
+        "calibration": "sigmoid_holdout",
+        "model_explanation_note": "Las observaciones no son atribuciones causales ni SHAP."
+      },
+      "matches_functional_expectation": true
+    },
+    {
+      "case_id": "CU02-17",
+      "url_controlled": "https://example.com",
+      "expected_reference": null,
+      "expected_invalid": false,
+      "result": {
+        "analysis_id": "0c7d57b1-eeb8-4c4e-8f02-2837f6ecf97b",
+        "analyzed_at": "2026-09-23T19:36:37.805228+00:00",
+        "state": "CLASIFICADA",
+        "classification": "likely_suspicious",
+        "level": "ALTO",
+        "p_phishing": 0.99677,
+        "coverage": "PARCIAL",
+        "analysis_mode": "static_url",
+        "observed_features": {
+          "url_length": 19,
+          "host_length": 11,
+          "path_length": 0,
+          "query_length": 0,
+          "subdomains": 0,
+          "path_segments": 0,
+          "parameters": 0,
+          "digits": 0,
+          "digit_ratio": 0.0,
+          "hyphens": 0,
+          "host_hyphens": 0,
+          "dots": 1,
+          "at_signs": 0,
+          "percent_signs": 0,
+          "equals": 0,
+          "special_ratio": 0.21052631578947367,
+          "is_ip": 0,
+          "https_declared": 1,
+          "explicit_port": 0,
+          "has_userinfo": 0,
+          "punycode": 0,
+          "host_entropy": 3.095795255000934,
+          "path_entropy": 0.0,
+          "keyword_count": 0,
+          "has_fragment": 0
+        },
+        "criteria": [
+          {
+            "id": "url_extensa",
+            "state": "NO_DETECTADO",
+            "evidence": "Longitud: 19; umbral descriptivo: 200."
+          },
+          {
+            "id": "multiples_subdominios",
+            "state": "NO_DETECTADO",
+            "evidence": "Subdominios: 0."
+          },
+          {
+            "id": "ip_en_hostname",
+            "state": "NO_DETECTADO",
+            "evidence": "Hostname expresado como IP literal."
+          },
+          {
+            "id": "userinfo",
+            "state": "NO_DETECTADO",
+            "evidence": "Presencia de información antes de @ en la autoridad."
+          },
+          {
+            "id": "palabras_referencia",
+            "state": "NO_DETECTADO",
+            "evidence": "Coincidencias léxicas: 0."
+          },
+          {
+            "id": "acortador",
+            "state": "NO_DETECTADO",
+            "evidence": "Comparación exacta con catálogo parcial de acortadores."
+          },
+          {
+            "id": "marca_fuera_dominio_referencia",
+            "state": "NO_DETECTADO",
+            "evidence": "Mención textual fuera del hostname de referencia: "
+          },
+          {
+            "id": "solicitud_credenciales",
+            "state": "NO_EVALUABLE",
+            "evidence": "No se obtiene contenido ni se visita el sitio."
+          },
+          {
+            "id": "redirecciones",
+            "state": "NO_EVALUABLE",
+            "evidence": "No se obtiene contenido ni se visita el sitio."
+          },
+          {
+            "id": "inconsistencia_visual",
+            "state": "NO_EVALUABLE",
+            "evidence": "No se obtiene contenido ni se visita el sitio."
+          }
+        ],
+        "reference": {
+          "hostname_matches": [],
+          "brand_mentions_elsewhere": [],
+          "note": "Catálogo parcial de referencia. Coincidir no garantiza seguridad; no coincidir tampoco demuestra fraude."
+        },
+        "hostname": "example.com",
+        "model_version": "forest-a236549c-s42-2026-09-23T19:32:22.140656+00:00",
+        "feature_version": "static-v1",
+        "model_explanation": null,
+        "limitations": "Estimación académica basada solo en el texto de la URL. No se visitó el sitio ni se verificaron contenido, TLS, redirecciones o reputación actual. No garantiza seguridad ni confirma phishing.",
+        "message": "Probablemente sospechosa",
+        "model_name": "forest",
+        "model_classification": "likely_suspicious",
+        "precaution_reasons": [],
+        "precaution_policy_version": "precaution-v1",
+        "precaution_override": false,
+        "decision_policy": {
+          "low": 0.5,
+          "high": 0.5,
+          "version": "policy-v1",
+          "empirical_class_error_budget": 0.05,
+          "min_validation_cases": 30,
+          "note": "Umbrales elegidos en validación independiente. No garantizan tasas futuras."
+        },
+        "calibration": "sigmoid_holdout",
+        "model_explanation_note": "Las observaciones no son atribuciones causales ni SHAP."
+      },
+      "matches_functional_expectation": true
+    },
+    {
+      "case_id": "CU02-18",
+      "url_controlled": "http://example.com",
+      "expected_reference": null,
+      "expected_invalid": false,
+      "result": {
+        "analysis_id": "a6bbd9fe-87e2-45fd-8fb5-9da48007cabc",
+        "analyzed_at": "2026-09-23T19:36:37.828020+00:00",
+        "state": "CLASIFICADA",
+        "classification": "likely_suspicious",
+        "level": "ALTO",
+        "p_phishing": 1.0,
+        "coverage": "PARCIAL",
+        "analysis_mode": "static_url",
+        "observed_features": {
+          "url_length": 18,
+          "host_length": 11,
+          "path_length": 0,
+          "query_length": 0,
+          "subdomains": 0,
+          "path_segments": 0,
+          "parameters": 0,
+          "digits": 0,
+          "digit_ratio": 0.0,
+          "hyphens": 0,
+          "host_hyphens": 0,
+          "dots": 1,
+          "at_signs": 0,
+          "percent_signs": 0,
+          "equals": 0,
+          "special_ratio": 0.2222222222222222,
+          "is_ip": 0,
+          "https_declared": 0,
+          "explicit_port": 0,
+          "has_userinfo": 0,
+          "punycode": 0,
+          "host_entropy": 3.095795255000934,
+          "path_entropy": 0.0,
+          "keyword_count": 0,
+          "has_fragment": 0
+        },
+        "criteria": [
+          {
+            "id": "url_extensa",
+            "state": "NO_DETECTADO",
+            "evidence": "Longitud: 18; umbral descriptivo: 200."
+          },
+          {
+            "id": "multiples_subdominios",
+            "state": "NO_DETECTADO",
+            "evidence": "Subdominios: 0."
+          },
+          {
+            "id": "ip_en_hostname",
+            "state": "NO_DETECTADO",
+            "evidence": "Hostname expresado como IP literal."
+          },
+          {
+            "id": "userinfo",
+            "state": "NO_DETECTADO",
+            "evidence": "Presencia de información antes de @ en la autoridad."
+          },
+          {
+            "id": "palabras_referencia",
+            "state": "NO_DETECTADO",
+            "evidence": "Coincidencias léxicas: 0."
+          },
+          {
+            "id": "acortador",
+            "state": "NO_DETECTADO",
+            "evidence": "Comparación exacta con catálogo parcial de acortadores."
+          },
+          {
+            "id": "marca_fuera_dominio_referencia",
+            "state": "NO_DETECTADO",
+            "evidence": "Mención textual fuera del hostname de referencia: "
+          },
+          {
+            "id": "solicitud_credenciales",
+            "state": "NO_EVALUABLE",
+            "evidence": "No se obtiene contenido ni se visita el sitio."
+          },
+          {
+            "id": "redirecciones",
+            "state": "NO_EVALUABLE",
+            "evidence": "No se obtiene contenido ni se visita el sitio."
+          },
+          {
+            "id": "inconsistencia_visual",
+            "state": "NO_EVALUABLE",
+            "evidence": "No se obtiene contenido ni se visita el sitio."
+          }
+        ],
+        "reference": {
+          "hostname_matches": [],
+          "brand_mentions_elsewhere": [],
+          "note": "Catálogo parcial de referencia. Coincidir no garantiza seguridad; no coincidir tampoco demuestra fraude."
+        },
+        "hostname": "example.com",
+        "model_version": "forest-a236549c-s42-2026-09-23T19:32:22.140656+00:00",
+        "feature_version": "static-v1",
+        "model_explanation": null,
+        "limitations": "Estimación académica basada solo en el texto de la URL. No se visitó el sitio ni se verificaron contenido, TLS, redirecciones o reputación actual. No garantiza seguridad ni confirma phishing.",
+        "message": "Probablemente sospechosa",
+        "model_name": "forest",
+        "model_classification": "likely_suspicious",
+        "precaution_reasons": [],
+        "precaution_policy_version": "precaution-v1",
+        "precaution_override": false,
+        "decision_policy": {
+          "low": 0.5,
+          "high": 0.5,
+          "version": "policy-v1",
+          "empirical_class_error_budget": 0.05,
+          "min_validation_cases": 30,
+          "note": "Umbrales elegidos en validación independiente. No garantizan tasas futuras."
+        },
+        "calibration": "sigmoid_holdout",
+        "model_explanation_note": "Las observaciones no son atribuciones causales ni SHAP."
+      },
+      "matches_functional_expectation": true
+    },
+    {
+      "case_id": "CU02-19",
+      "url_controlled": "https://127.0.0.1",
+      "expected_reference": null,
+      "expected_invalid": false,
+      "result": {
+        "analysis_id": "82f43eb3-210a-423a-9e23-8800f1574dd9",
+        "analyzed_at": "2026-09-23T19:36:37.850440+00:00",
+        "state": "CLASIFICADA",
+        "classification": "likely_suspicious",
+        "level": "ALTO",
+        "p_phishing": 0.933929,
+        "coverage": "PARCIAL",
+        "analysis_mode": "static_url",
+        "observed_features": {
+          "url_length": 17,
+          "host_length": 9,
+          "path_length": 0,
+          "query_length": 0,
+          "subdomains": 0,
+          "path_segments": 0,
+          "parameters": 0,
+          "digits": 6,
+          "digit_ratio": 0.35294117647058826,
+          "hyphens": 0,
+          "host_hyphens": 0,
+          "dots": 3,
+          "at_signs": 0,
+          "percent_signs": 0,
+          "equals": 0,
+          "special_ratio": 0.35294117647058826,
+          "is_ip": 1,
+          "https_declared": 1,
+          "explicit_port": 0,
+          "has_userinfo": 0,
+          "punycode": 0,
+          "host_entropy": 2.197159723424149,
+          "path_entropy": 0.0,
+          "keyword_count": 0,
+          "has_fragment": 0
+        },
+        "criteria": [
+          {
+            "id": "url_extensa",
+            "state": "NO_DETECTADO",
+            "evidence": "Longitud: 17; umbral descriptivo: 200."
+          },
+          {
+            "id": "multiples_subdominios",
+            "state": "NO_DETECTADO",
+            "evidence": "Subdominios: 0."
+          },
+          {
+            "id": "ip_en_hostname",
+            "state": "DETECTADO",
+            "evidence": "Hostname expresado como IP literal."
+          },
+          {
+            "id": "userinfo",
+            "state": "NO_DETECTADO",
+            "evidence": "Presencia de información antes de @ en la autoridad."
+          },
+          {
+            "id": "palabras_referencia",
+            "state": "NO_DETECTADO",
+            "evidence": "Coincidencias léxicas: 0."
+          },
+          {
+            "id": "acortador",
+            "state": "NO_DETECTADO",
+            "evidence": "Comparación exacta con catálogo parcial de acortadores."
+          },
+          {
+            "id": "marca_fuera_dominio_referencia",
+            "state": "NO_DETECTADO",
+            "evidence": "Mención textual fuera del hostname de referencia: "
+          },
+          {
+            "id": "solicitud_credenciales",
+            "state": "NO_EVALUABLE",
+            "evidence": "No se obtiene contenido ni se visita el sitio."
+          },
+          {
+            "id": "redirecciones",
+            "state": "NO_EVALUABLE",
+            "evidence": "No se obtiene contenido ni se visita el sitio."
+          },
+          {
+            "id": "inconsistencia_visual",
+            "state": "NO_EVALUABLE",
+            "evidence": "No se obtiene contenido ni se visita el sitio."
+          }
+        ],
+        "reference": {
+          "hostname_matches": [],
+          "brand_mentions_elsewhere": [],
+          "note": "Catálogo parcial de referencia. Coincidir no garantiza seguridad; no coincidir tampoco demuestra fraude."
+        },
+        "hostname": "127.0.0.1",
+        "model_version": "forest-a236549c-s42-2026-09-23T19:32:22.140656+00:00",
+        "feature_version": "static-v1",
+        "model_explanation": null,
+        "limitations": "Estimación académica basada solo en el texto de la URL. No se visitó el sitio ni se verificaron contenido, TLS, redirecciones o reputación actual. No garantiza seguridad ni confirma phishing.",
+        "message": "Probablemente sospechosa",
+        "model_name": "forest",
+        "model_classification": "likely_suspicious",
+        "precaution_reasons": [
+          "IP literal o sufijo fuera de la lista pública: cobertura limitada para este caso."
+        ],
+        "precaution_policy_version": "precaution-v1",
+        "precaution_override": false,
+        "decision_policy": {
+          "low": 0.5,
+          "high": 0.5,
+          "version": "policy-v1",
+          "empirical_class_error_budget": 0.05,
+          "min_validation_cases": 30,
+          "note": "Umbrales elegidos en validación independiente. No garantizan tasas futuras."
+        },
+        "calibration": "sigmoid_holdout",
+        "model_explanation_note": "Las observaciones no son atribuciones causales ni SHAP."
+      },
+      "matches_functional_expectation": true
+    },
+    {
+      "case_id": "CU02-20",
+      "url_controlled": "https://[::1]",
+      "expected_reference": null,
+      "expected_invalid": false,
+      "result": {
+        "analysis_id": "c822cc09-765c-48c9-bd5a-e0ddc18bcf8f",
+        "analyzed_at": "2026-09-23T19:36:37.873173+00:00",
+        "state": "CLASIFICADA",
+        "classification": "likely_suspicious",
+        "level": "ALTO",
+        "p_phishing": 0.894953,
+        "coverage": "PARCIAL",
+        "analysis_mode": "static_url",
+        "observed_features": {
+          "url_length": 13,
+          "host_length": 3,
+          "path_length": 0,
+          "query_length": 0,
+          "subdomains": 0,
+          "path_segments": 0,
+          "parameters": 0,
+          "digits": 1,
+          "digit_ratio": 0.07692307692307693,
+          "hyphens": 0,
+          "host_hyphens": 0,
+          "dots": 0,
+          "at_signs": 0,
+          "percent_signs": 0,
+          "equals": 0,
+          "special_ratio": 0.5384615384615384,
+          "is_ip": 1,
+          "https_declared": 1,
+          "explicit_port": 0,
+          "has_userinfo": 0,
+          "punycode": 0,
+          "host_entropy": 0.9182958340544896,
+          "path_entropy": 0.0,
+          "keyword_count": 0,
+          "has_fragment": 0
+        },
+        "criteria": [
+          {
+            "id": "url_extensa",
+            "state": "NO_DETECTADO",
+            "evidence": "Longitud: 13; umbral descriptivo: 200."
+          },
+          {
+            "id": "multiples_subdominios",
+            "state": "NO_DETECTADO",
+            "evidence": "Subdominios: 0."
+          },
+          {
+            "id": "ip_en_hostname",
+            "state": "DETECTADO",
+            "evidence": "Hostname expresado como IP literal."
+          },
+          {
+            "id": "userinfo",
+            "state": "NO_DETECTADO",
+            "evidence": "Presencia de información antes de @ en la autoridad."
+          },
+          {
+            "id": "palabras_referencia",
+            "state": "NO_DETECTADO",
+            "evidence": "Coincidencias léxicas: 0."
+          },
+          {
+            "id": "acortador",
+            "state": "NO_DETECTADO",
+            "evidence": "Comparación exacta con catálogo parcial de acortadores."
+          },
+          {
+            "id": "marca_fuera_dominio_referencia",
+            "state": "NO_DETECTADO",
+            "evidence": "Mención textual fuera del hostname de referencia: "
+          },
+          {
+            "id": "solicitud_credenciales",
+            "state": "NO_EVALUABLE",
+            "evidence": "No se obtiene contenido ni se visita el sitio."
+          },
+          {
+            "id": "redirecciones",
+            "state": "NO_EVALUABLE",
+            "evidence": "No se obtiene contenido ni se visita el sitio."
+          },
+          {
+            "id": "inconsistencia_visual",
+            "state": "NO_EVALUABLE",
+            "evidence": "No se obtiene contenido ni se visita el sitio."
+          }
+        ],
+        "reference": {
+          "hostname_matches": [],
+          "brand_mentions_elsewhere": [],
+          "note": "Catálogo parcial de referencia. Coincidir no garantiza seguridad; no coincidir tampoco demuestra fraude."
+        },
+        "hostname": "::1",
+        "model_version": "forest-a236549c-s42-2026-09-23T19:32:22.140656+00:00",
+        "feature_version": "static-v1",
+        "model_explanation": null,
+        "limitations": "Estimación académica basada solo en el texto de la URL. No se visitó el sitio ni se verificaron contenido, TLS, redirecciones o reputación actual. No garantiza seguridad ni confirma phishing.",
+        "message": "Probablemente sospechosa",
+        "model_name": "forest",
+        "model_classification": "likely_suspicious",
+        "precaution_reasons": [
+          "IP literal o sufijo fuera de la lista pública: cobertura limitada para este caso."
+        ],
+        "precaution_policy_version": "precaution-v1",
+        "precaution_override": false,
+        "decision_policy": {
+          "low": 0.5,
+          "high": 0.5,
+          "version": "policy-v1",
+          "empirical_class_error_budget": 0.05,
+          "min_validation_cases": 30,
+          "note": "Umbrales elegidos en validación independiente. No garantizan tasas futuras."
+        },
+        "calibration": "sigmoid_holdout",
+        "model_explanation_note": "Las observaciones no son atribuciones causales ni SHAP."
+      },
+      "matches_functional_expectation": true
+    },
+    {
+      "case_id": "CU02-21",
+      "url_controlled": "",
+      "expected_reference": null,
+      "expected_invalid": true,
+      "error": "Ingrese una URL de entre 1 y 4096 caracteres.",
+      "matches_functional_expectation": true
+    },
+    {
+      "case_id": "CU02-22",
+      "url_controlled": "facebook.com",
+      "expected_reference": null,
+      "expected_invalid": true,
+      "error": "Use una URL completa que comience con http:// o https://.",
+      "matches_functional_expectation": true
+    },
+    {
+      "case_id": "CU02-23",
+      "url_controlled": "javascript:alert(1)",
+      "expected_reference": null,
+      "expected_invalid": true,
+      "error": "Use una URL completa que comience con http:// o https://.",
+      "matches_functional_expectation": true
+    },
+    {
+      "case_id": "CU02-24",
+      "url_controlled": "https://example.com:99999",
+      "expected_reference": null,
+      "expected_invalid": true,
+      "error": "La URL tiene una estructura no admitida.",
+      "matches_functional_expectation": true
+    }
+  ]
+}

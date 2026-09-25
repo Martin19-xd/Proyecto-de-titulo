@@ -1,0 +1,31 @@
+{
+  "automated_tests": 70,
+  "functional_cases": 24,
+  "browser": "Chromium 134, headless Linux",
+  "viewports": [
+    1280,
+    375,
+    320
+  ],
+  "browser_checks": [
+    {
+      "url": "https://www.bancoestado.cl",
+      "status": "scored",
+      "title": "Muy pocas señales"
+    },
+    {
+      "url": "https://www.bancoestado.cl/content/bancoestado-public/cl/es/home/home.html#/",
+      "status": "uncertain",
+      "title": "Conviene comprobar este enlace"
+    },
+    {
+      "url": "https://bancoestado.cl.ejemplo.test",
+      "status": "uncertain",
+      "title": "Revisa el enlace antes de continuar"
+    }
+  ],
+  "horizontal_overflow": false,
+  "javascript_errors": [],
+  "model_retrained": false,
+  "note": "Pruebas funcionales. No son métricas de detección ni validación con personas mayores."
+}

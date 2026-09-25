@@ -1,0 +1,11 @@
+<!doctype html>
+<html lang="es"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>URL Guard · Análisis preventivo</title><link rel="stylesheet" href="/style.css"><script src="/app.js" defer></script></head>
+<body><main><p class="eyebrow">PROYECTO ACADÉMICO · ANÁLISIS ESTÁTICO</p><h1>Antes de abrir, analiza el enlace.</h1>
+<p>Pega una URL para estimar si sus características se parecen a las de ejemplos de phishing. No abriremos el sitio.</p>
+<form id="form"><label for="url">URL completa</label><input id="url" name="url" type="text" maxlength="4096" placeholder="https://www.bancoestado.cl" autocomplete="off" spellcheck="false" required><button id="submit">Analizar URL</button></form>
+<p class="small">Ejemplos de referencia: Facebook, Instagram y BancoEstado. Coincidir con un dominio conocido no garantiza seguridad.</p>
+<section id="result" hidden aria-live="polite"><h2 id="message"></h2><p id="probability"></p><p id="model" class="small"></p><p id="reference"></p>
+<p id="precaution" class="notice" hidden></p><h3>Características observadas</h3><ul id="features"></ul><h3>Criterios y cobertura</h3><ul id="criteria"></ul>
+<p class="small">Estas observaciones describen la URL; no explican causalmente la predicción del modelo.</p><p id="limitation" class="notice"></p><p id="persistence" class="small"></p></section>
+<p id="error" role="alert"></p><footer>Prototipo local · Sin navegación, capturas ni descarga de contenido.</footer></main></body></html>

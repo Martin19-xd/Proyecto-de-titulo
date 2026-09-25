@@ -1,0 +1,9 @@
+{
+  "automated_tests": 51,
+  "automated_passed": 51,
+  "controlled_cases": 24,
+  "controlled_passed": 24,
+  "warning": "Starlette TestClient: deprecación de httpx; pruebas completadas.",
+  "mongodb_live_test": false,
+  "external_validation": false
+}
