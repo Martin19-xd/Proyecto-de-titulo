@@ -57,11 +57,9 @@ def test_missing_model_has_no_public_score():
 
 def test_api_exposes_public_view_and_original_score(monkeypatch):
     from app import app
-    monkeypatch.delenv('MONGO_URI', raising=False)
     monkeypatch.delenv('MODEL_PATH', raising=False)
     app.middleware_stack = None
     with TestClient(app) as client:
         r = client.post('/api/analyze', json={'url':'https://www.bancoestado.cl/content/home.html'}).json()
     assert r['public']['status'] == 'uncertain'
     assert r['p_phishing'] is not None
-    assert r['persistence']['status'] == 'disabled'

@@ -31,8 +31,7 @@ python3.12 -m venv .venv
 
 Abre **http://127.0.0.1:8000**. También hay documentación del contrato en `/docs`.
 Detén el servidor con Ctrl+C. La instalación de dependencias requiere Internet;
-la predicción posterior no necesita acceso a Internet. MongoDB es opcional para
-probar el analizador; sin él la respuesta indica `persistence.status=disabled`.
+la predicción posterior no necesita acceso a Internet.
 
 En los comandos siguientes `python` significa el ejecutable del entorno virtual
 anterior, o `python` después de activar ese entorno.
@@ -83,7 +82,7 @@ en el experimento incluido. No se fuerza que Deep Learning sea el ganador.
 | `entrenar.py` | Preparación, particiones, seis líneas experimentales, calibración, selección y evaluación. |
 | `descargar_datos.py` | Descarga del dataset público fijo de UCI. |
 | `analizar.py` | Uso por consola. |
-| `app.py` | FastAPI y adaptador opcional a MongoDB. |
+| `app.py` | Servidor FastAPI. |
 | `static/` | Interfaz HTML/CSS/JavaScript sin dependencias externas. |
 | `ejecutar_casos.py` | CU-02: 24 casos funcionales y evidencia JSON. |
 | `tests/` | Verificación de extracción, API, ausencia de red, integridad e integración. |
@@ -197,10 +196,9 @@ no miden la exactitud de la política en la población. Falta evaluarla en datos
 | MotorCriterios | Función `criteria`, estados DETECTADO/NO_DETECTADO/NO_EVALUABLE. |
 | ClasificadorRiesgo | Modelo calibrado, umbrales y política preventiva explícita. |
 | GeneradorAlertas | Mensajes de resultado y limitaciones en el analizador. |
-| Repositorio / AdaptadorMongoDB | Adaptador opcional de persistencia en `app.py`. |
 | EjecutorPruebas / CU-02 | `ejecutar_casos.py`, con 24 verificaciones funcionales. |
 | Contenido y redirecciones simulados | No implementados; criterios NO_EVALUABLE. |
-| Vista física | Navegador + Python/FastAPI; MongoDB opcional para ejecución mínima. |
+| Vista física | Navegador + Python/FastAPI. |
 
 No hay Node.js porque el UML entregado ubica el backend en Python/FastAPI.
 El motor ML amplía el diseño original de reglas: será necesario actualizar la memoria
@@ -212,25 +210,7 @@ para un modelo entrenado con características estáticas. Sin modelo, estado NO_
 nivel vacío y probabilidad nula. Una URL inválida produce 422; un fallo técnico no genera
 una clasificación baja. Los estados internos no se almacenan como eventos de workflow.
 
-CU-02 guarda evidencia local JSON; no afirma persistencia en MongoDB. La aplicación
-sí puede guardar resúmenes de análisis en MongoDB. Ampliar el repositorio de pruebas
-a MongoDB es una diferencia pendiente respecto al UML original.
-
-## 8. MongoDB opcional
-
-Con una instancia propia escuchando solo en localhost, configura antes de arrancar:
-
-```powershell
-$env:MONGO_URI="mongodb://127.0.0.1:27017"
-```
-
-macOS/Linux: `export MONGO_URI=mongodb://127.0.0.1:27017`.
-
-Base: `url_guard`; colección: `analyses`. No se guardan URL completa, consultas,
-credenciales ni hostname. Se guardan identificador, fecha, métricas descriptivas,
-predicción y versiones. Una falla de escritura devuelve `persistence.status=failed`.
-No hay historial público ni sistema de usuarios. La conexión con un servidor MongoDB
-real no fue ejecutada en el entorno de entrega; se verificó el tratamiento de fallo.
+CU-02 guarda evidencia local JSON.
 
 ## 9. API
 
@@ -243,7 +223,7 @@ Content-Type: application/json
 
 Campos principales: `message`, `level`, `p_phishing`, `model_classification`,
 `classification`, `observed_features`, `criteria`, `reference`, `coverage`,
-`precaution_reasons`, `model_version`, `limitations`, `persistence`.
+`precaution_reasons`, `model_version`, `limitations`.
 
 `p_phishing` es la estimación calibrada en la distribución del dataset; no mide la
 probabilidad real universal de fraude ni el nivel de seguridad del sitio. Los

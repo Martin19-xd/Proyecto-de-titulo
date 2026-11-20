@@ -18,36 +18,10 @@ from url_guard.core import AnalizadorURL, InvalidURL
 ROOT = Path(__file__).resolve().parent
 
 
-class AdaptadorMongoDB:
-    def __init__(self, uri):
-        self.client = None
-        if uri:
-            from pymongo import MongoClient
-            self.client = MongoClient(uri, serverSelectionTimeoutMS=1500,
-                                      connectTimeoutMS=1500, socketTimeoutMS=1500)
-
-    def guardar(self, result):
-        if self.client is None:
-            return {"status": "disabled"}
-        # No guarda URL, hostname, credenciales, consulta ni menciones de marca.
-        fields = ("analysis_id", "analyzed_at", "state", "classification", "p_phishing",
-                  "model_version", "feature_version", "observed_features", "analysis_mode")
-        record = {k: result[k] for k in fields}
-        from pymongo.errors import PyMongoError
-        try:
-            self.client.url_guard.analyses.insert_one(record)
-            return {"status": "saved"}
-        except PyMongoError:
-            return {"status": "failed", "message": "El análisis terminó, pero no se pudo guardar."}
-
-
 @asynccontextmanager
 async def lifespan(app):
     app.state.analyzer = AnalizadorURL(os.getenv("MODEL_PATH", str(ROOT / "artifacts/selected.joblib")))
-    app.state.repository = AdaptadorMongoDB(os.getenv("MONGO_URI"))
     yield
-    if app.state.repository.client is not None:
-        app.state.repository.client.close()
 
 
 class RequestLimits:
@@ -147,5 +121,4 @@ async def analyze(body: AnalysisInput):
         result = await run_in_threadpool(app.state.analyzer.analizar, body.url)
     except InvalidURL as exc:
         raise HTTPException(status_code=422, detail=str(exc)) from exc
-    result["persistence"] = await run_in_threadpool(app.state.repository.guardar, result)
     return result

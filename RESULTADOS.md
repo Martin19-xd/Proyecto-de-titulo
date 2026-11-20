@@ -52,7 +52,6 @@ Los ejemplos con marca fuera de su dominio revelan una limitación real del mode
 - La selección entre seis líneas usa un único holdout agrupado; falta repetir semillas y ampliar la comparación.
 - La MLP obtiene en test una AP levemente distinta a Random Forest. Se conserva la selección previa por validación para no usar test como ajuste.
 - Las pruebas de software no sustituyen la revisión de comprensión de alertas con usuarios.
-- Adaptador MongoDB implementado y fallo simulado verificado; integración con MongoDB real pendiente.
 - Interfaz y API locales. No se realizó una auditoría para despliegue público.
 
 ## Trazabilidad

@@ -6,7 +6,6 @@ anyio==4.15.1
 certifi==2026.7.22
 charset-normalizer==3.4.4
 click==8.5.0
-dnspython==2.8.0
 fastapi==0.141.1
 filelock==4.0.1
 h11==0.16.0
@@ -21,7 +20,6 @@ pandas==2.2.3
 pluggy==1.6.0
 pydantic==2.13.5
 pydantic_core==2.46.5
-pymongo==4.18.1
 pytest==9.1.1
 python-dateutil==2.9.0.post0
 pytz==2026.3.post1

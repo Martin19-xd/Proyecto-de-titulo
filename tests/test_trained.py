@@ -11,7 +11,6 @@ pytestmark = pytest.mark.skipif(not Path("artifacts/selected.joblib").exists(), 
 def test_api_cli_probability_agree(monkeypatch):
     from app import app
     monkeypatch.setenv("MODEL_PATH", str(Path("artifacts/selected.joblib").resolve()))
-    monkeypatch.delenv("MONGO_URI", raising=False)
     app.middleware_stack = None
     a = AnalizadorURL("artifacts/selected.joblib")
     url = "https://www.bancoestado.cl"
